@@ -23,6 +23,7 @@ function btnClick() {
 
 var items = document.querySelectorAll(".animal");
 var items2 = document.querySelectorAll(".envi");
+var items3 = document.querySelectorAll(".sub");
 const textarea = document.querySelector('textarea');
 const log = document.getElementById('log');
 var r = document.querySelector(':root');
@@ -49,7 +50,8 @@ function logScroll(e) {
         if (e.target.scrollTop>120) {
             if(!items2[i].classList.contains("in-view")){
               items2[i].classList.add("in-view");
-             
+              items3[0].classList.add("in-view");
+              items3[1].classList.add("in-view");
             }
           } else if(e.target.scrollTop<=120) {
               items2[i].classList.remove("in-view");
@@ -77,6 +79,9 @@ function showDiv() {
     }
     for (var i = 0; i < items2.length; i++){
         items2[i].classList.remove("in-view");
+    }
+    for (var i = 0; i < items3.length; i++){
+        items3[i].classList.remove("in-view");
     }
  }
 

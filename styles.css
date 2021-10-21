@@ -16,7 +16,19 @@ body {
   background-position: 50% 50%;
   z-index: -20;
 }
-.epi{}
+
+#topsub{
+  position: fixed;
+  width: 100vw;
+  top: 0vh;
+  left: 0vw;
+}
+#bottomsub{
+  position: fixed;
+  width: 100vw;
+  bottom: -1vh;
+  left: 0vw;
+}
 .proj {
   width: 800px;
   height: 400px;
@@ -174,10 +186,16 @@ textarea::-webkit-scrollbar {
 .envi{
   display: none;
 }
+.sub{
+  display: none;
+}
 .animal.in-view{
   display: block;
 }
 .envi.in-view{
+  display: block;
+}
+.sub.in-view{
   display: block;
 }
 #tower{
