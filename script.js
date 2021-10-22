@@ -54,6 +54,7 @@ function logScroll(e) {
               items3[1].classList.add("in-view");
               items3[2].classList.add("in-view");
               items3[3].classList.add("in-view");
+              items3[4].classList.add("in-view");
             }
           } else if(e.target.scrollTop<=120) {
               items2[i].classList.remove("in-view");

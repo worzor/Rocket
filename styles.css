@@ -29,11 +29,20 @@ body {
   bottom: -1vh;
   left: 0vw;
 }
+#leftinner{
+  position: fixed;
+  width: 40%;
+  left: -1vw;
+  bottom: 15vh;
+  transform:  translate(calc(((var(--sizeTo))*(-0.1))), calc(((var(--sizeTo))*(0.05))));
+}
+
 #leftcoral{
   position: fixed;
   width: 50%;
   left: -2vw;
   bottom: 18vh;
+  transform:  translate(calc(((var(--sizeTo))*(-0.1))), calc(((var(--sizeTo))*(0.1))));
 }
 #rightcoral{
   position: fixed;
@@ -41,6 +50,7 @@ body {
   width: 30%;
   right: -3vw;
   bottom: 10vh;
+  transform:  translate(calc(((var(--sizeTo))*(0.16))), 0);
 }
 .proj {
   width: 800px;
@@ -220,8 +230,8 @@ textarea::-webkit-scrollbar {
 }
 #titanic{
   position: fixed;
-  top: 15vh;
-  left: 39vw;
+  top: 25vh;
+  left: 45vw;
   width: calc((100px + (var(--sizeTi)))/1);
   transform: translate(0, 0);
 }
@@ -234,8 +244,8 @@ textarea::-webkit-scrollbar {
 }
 #tuna{
   position: fixed;
-  top: 35vh;
-  left: 7vw;
+  top: 45vh;
+  left: -7vw;
   width: calc(var(--sizeT));
   
   transform: scaleX(-1) rotate(10deg) translate(calc((var(--sizeT))*-2.3), calc((var(--sizeT)*(-0.5))));
@@ -258,10 +268,10 @@ textarea::-webkit-scrollbar {
 }
 #reefsh{
   position: fixed;
-  top: 65vh;
-  left: 57vw;
+  top: 85vh;
+  left: 67vw;
   width: var(--sizeRs);
-  transform: scaleX(-1) rotate(-8deg) translate(calc((var(--sizeRs))*1.5), calc((var(--sizeRs)*(-0.2))));
+  transform: scaleX(-1) rotate(-20deg) translate(calc((var(--sizeRs))*1.5), calc((var(--sizeRs)*(-0.2))));
 }
 img{
   width: 100%;
