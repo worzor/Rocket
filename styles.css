@@ -29,6 +29,19 @@ body {
   bottom: -1vh;
   left: 0vw;
 }
+#leftcoral{
+  position: fixed;
+  width: 50%;
+  left: -2vw;
+  bottom: 18vh;
+}
+#rightcoral{
+  position: fixed;
+  
+  width: 30%;
+  right: -3vw;
+  bottom: 10vh;
+}
 .proj {
   width: 800px;
   height: 400px;
@@ -251,7 +264,7 @@ textarea::-webkit-scrollbar {
   transform: scaleX(-1) rotate(-8deg) translate(calc((var(--sizeRs))*1.5), calc((var(--sizeRs)*(-0.2))));
 }
 img{
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
