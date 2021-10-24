@@ -17,40 +17,46 @@ body {
   z-index: -20;
 }
 
-#topsub{
+#topsub {
   position: fixed;
   width: 100vw;
   top: 0vh;
   left: 0vw;
 }
-#bottomsub{
+#bottomsub {
   position: fixed;
   width: 100vw;
   bottom: -1vh;
   left: 0vw;
 }
-#leftinner{
+#leftinner {
   position: fixed;
   width: 40%;
   left: -1vw;
   bottom: 15vh;
-  transform:  translate(calc(((var(--sizeTo))*(-0.1))), calc(((var(--sizeTo))*(0.05))));
+  transform: translate(
+    calc(((var(--sizeTo)) * (-0.1))),
+    calc(((var(--sizeTo)) * (0.05)))
+  );
 }
 
-#leftcoral{
+#leftcoral {
   position: fixed;
   width: 50%;
   left: -2vw;
   bottom: 18vh;
-  transform:  translate(calc(((var(--sizeTo))*(-0.1))), calc(((var(--sizeTo))*(0.1))));
+  transform: translate(
+    calc(((var(--sizeTo)) * (-0.1))),
+    calc(((var(--sizeTo)) * (0.1)))
+  );
 }
-#rightcoral{
+#rightcoral {
   position: fixed;
-  
+
   width: 30%;
   right: -3vw;
   bottom: 10vh;
-  transform:  translate(calc(((var(--sizeTo))*(0.16))), 0);
+  transform: translate(calc(((var(--sizeTo)) * (0.16))), 0);
 }
 .proj {
   width: 800px;
@@ -155,12 +161,12 @@ textarea::-webkit-scrollbar {
 }
 :root {
   --l: 49%;
-  --hBox:0;
-  --size:0px;
-  --sizeT:0px;
-  --sizeRs:0px;
-  --sizeTi:0px;
-  --sizeTo:0px;
+  --hBox: 0;
+  --size: 0px;
+  --sizeT: 0px;
+  --sizeRs: 0px;
+  --sizeTi: 0px;
+  --sizeTo: 0px;
 }
 #mybtn2 {
   width: 8rem;
@@ -178,7 +184,6 @@ textarea::-webkit-scrollbar {
   background-color: #f44336;
 }
 #mybtn4 {
-  
   width: 4rem;
   height: 2rem;
   position: absolute;
@@ -203,58 +208,64 @@ textarea::-webkit-scrollbar {
   bottom: 11vh;
   position: absolute;
 }
-.animal{
+.animal {
   display: none;
 }
-.envi{
+.envi {
   display: none;
 }
-.sub{
+.sub {
   display: none;
 }
-.animal.in-view{
+.animal.in-view {
   display: block;
 }
-.envi.in-view{
+.envi.in-view {
   display: block;
 }
-.sub.in-view{
+.sub.in-view {
   display: block;
 }
-#tower{
+#tower {
   position: fixed;
   top: 33vh;
   left: 24vw;
   width: calc(200px + (var(--sizeTo)));
-  transform: scaleX(-1) translate(calc((var(--sizeTo))*1), 0);
+  transform: scaleX(-1) translate(calc((var(--sizeTo)) * 1), 0);
 }
-#titanic{
+#titanic {
   position: fixed;
   top: 25vh;
   left: 45vw;
-  width: calc((100px + (var(--sizeTi)))/1);
+  width: calc((100px + (var(--sizeTi))) / 1);
   transform: translate(0, 0);
 }
-#clownfish{
+#clownfish {
   position: fixed;
   top: 50vh;
   right: 40vw;
   width: calc(var(--size));
-  transform: scaleX(-1) rotate(-5deg) translate(calc((var(--sizeT))*-2.3), calc((var(--sizeT)*(0.5))));
+  transform: scaleX(-1) rotate(-5deg)
+    translate(calc((var(--sizeT)) * -2.3), calc((var(--sizeT) * (0.5))));
 }
-#tuna{
+.txt-clownfish .tooltiptext {
+  transform: scaleX(1) rotate(5deg);
+}
+#tuna {
   position: fixed;
   top: 45vh;
   left: -7vw;
   width: calc(var(--sizeT));
-  
-  transform: scaleX(-1) rotate(10deg) translate(calc((var(--sizeT))*-2.3), calc((var(--sizeT)*(-0.5))));
+
+  transform: scaleX(-1) rotate(10deg)
+    translate(calc((var(--sizeT)) * -2.3), calc((var(--sizeT) * (-0.5))));
 }
-.animal .tooltiptext {
+.animal .tooltiptext,
+.envi .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: black;
-  color: #fff;
+  background-color: rgba(255, 255, 255, 0.274);
+  color: black;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
@@ -263,18 +274,33 @@ textarea::-webkit-scrollbar {
   position: absolute;
   z-index: 1;
 }
-.animal:hover .tooltiptext {
+.animal:hover .tooltiptext,
+.envi:hover .tooltiptext {
   visibility: visible;
 }
-#reefsh{
+#reefsh {
   position: fixed;
   top: 85vh;
   left: 67vw;
   width: var(--sizeRs);
-  transform: scaleX(-1) rotate(-20deg) translate(calc((var(--sizeRs))*1.5), calc((var(--sizeRs)*(-0.2))));
+  transform: scaleX(-1) rotate(-20deg)
+    translate(calc((var(--sizeRs)) * 1.5), calc((var(--sizeRs) * (-0.2))));
 }
-img{
+img {
   width: 100%;
   height: auto;
 }
-
+.clownfish,
+.titanic,
+.tuna,
+.reefsh,
+.tower {
+  transition: transform 0.8s ease;
+}
+.clownfish:hover,
+.titanic:hover,
+.tuna:hover,
+.reefsh:hover,
+.tower:hover {
+  transform: scale(1.3);
+}
