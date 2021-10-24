@@ -3,6 +3,8 @@ body {
   background-color: #1d1e22;
   z-index: 20;
   overflow: hidden;
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
 }
 #parallax {
   position: relative;
