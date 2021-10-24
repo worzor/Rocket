@@ -248,9 +248,6 @@ textarea::-webkit-scrollbar {
   transform: scaleX(-1) rotate(-5deg)
     translate(calc((var(--sizeT)) * -2.3), calc((var(--sizeT) * (0.5))));
 }
-.txt-clownfish .tooltiptext {
-  transform: scaleX(1) rotate(5deg);
-}
 #tuna {
   position: fixed;
   top: 45vh;
@@ -263,7 +260,7 @@ textarea::-webkit-scrollbar {
 .animal .tooltiptext,
 .envi .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 250px;
   background-color: rgba(255, 255, 255, 0.274);
   color: black;
   text-align: center;
