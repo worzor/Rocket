@@ -13,13 +13,23 @@
         console.log(x);
         elem.style.backgroundPosition = x;
     }
+    var popup = document.getElementById("mypopup");
+    window.onclick = function (event) {
+        if (event.target == popup) {
+            popup.style.display = "none";
+        }
+        else{
+            popup.style.display = "flex";
+        }
+}
 
 })();
+
 function btnClick() {
-    document.getElementById('proj').style.animation = "fadeUp 1s forwards";
     document.getElementById("mypopup").style.visibility = "visible";
     document.getElementById('mypopup').style.animation = "fadepopup1 1s forwards";
 }
+
 
 var items = document.querySelectorAll(".animal");
 var items2 = document.querySelectorAll(".envi");

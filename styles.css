@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;300&display=swap");
 body {
   margin: 0;
   background-color: #1d1e22;
@@ -6,6 +6,11 @@ body {
   overflow: hidden;
   font-family: "Kanit", sans-serif;
   font-weight: 300;
+}
+p {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 15%;
 }
 #parallax {
   position: relative;
@@ -27,19 +32,16 @@ body {
   left: 0vw;
 }
 #bottomsub {
-  position:fixed;
+  position: fixed;
   width: 100vw;
   bottom: -1vh;
   left: 0vw;
 }
-#sand{
+#sand {
   position: fixed;
   width: 100%;
   bottom: -25vh;
-  transform: translate(
-    0,
-    calc(((var(--sizeTo)) * (0.15)))
-  );
+  transform: translate(0, calc(((var(--sizeTo)) * (0.15))));
 }
 #leftinner {
   position: fixed;
@@ -128,6 +130,7 @@ body {
   visibility: hidden;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 @keyframes fadepopup1 {
   0% {
@@ -145,10 +148,6 @@ body {
   background-color: #fff;
   left: 37%;
   top: 15%;
-}
-p {
-  font-size: 20px;
-  text-align: center;
 }
 textarea {
   width: 3rem;
@@ -182,10 +181,12 @@ textarea::-webkit-scrollbar {
 }
 #mybtn2 {
   width: 8rem;
-  height: 4rem;
+  height: 3rem;
   position: absolute;
   bottom: 11vh;
   z-index: 10;
+  border-radius: 15px;
+  font-size: 20px;
 }
 #mybtn3 {
   margin-top: 5vh;
@@ -211,7 +212,7 @@ textarea::-webkit-scrollbar {
   background-color: #f44336;
   color: white;
 }
-.sand{
+.sand {
   display: none;
 }
 
@@ -241,7 +242,7 @@ textarea::-webkit-scrollbar {
 .sub.in-view {
   display: block;
 }
-.sand.in-view{
+.sand.in-view {
   display: block;
 }
 #tower {
