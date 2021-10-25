@@ -32,6 +32,11 @@ body {
   bottom: -1vh;
   left: 0vw;
 }
+#sand{
+  position: fixed;
+  width: 100vw;
+  bottom: -0vh;
+}
 #leftinner {
   position: fixed;
   width: 40%;
