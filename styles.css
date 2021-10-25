@@ -27,15 +27,19 @@ body {
   left: 0vw;
 }
 #bottomsub {
-  position: fixed;
+  position:fixed;
   width: 100vw;
   bottom: -1vh;
   left: 0vw;
 }
 #sand{
   position: fixed;
-  width: 100vw;
-  bottom: -0vh;
+  width: 100%;
+  bottom: -25vh;
+  transform: translate(
+    0,
+    calc(((var(--sizeTo)) * (0.15)))
+  );
 }
 #leftinner {
   position: fixed;
@@ -207,6 +211,9 @@ textarea::-webkit-scrollbar {
   background-color: #f44336;
   color: white;
 }
+.sand{
+  display: none;
+}
 
 .dot {
   height: 200px;
@@ -234,16 +241,19 @@ textarea::-webkit-scrollbar {
 .sub.in-view {
   display: block;
 }
+.sand.in-view{
+  display: block;
+}
 #tower {
   position: fixed;
-  top: 33vh;
-  left: 24vw;
+  top: 37vh;
+  left: 28vw;
   width: calc(200px + (var(--sizeTo)));
   transform: scaleX(-1) translate(calc((var(--sizeTo)) * 1), 0);
 }
 #titanic {
   position: fixed;
-  top: 25vh;
+  top: 40vh;
   left: 45vw;
   width: calc((100px + (var(--sizeTi))) / 1);
   transform: translate(0, 0);

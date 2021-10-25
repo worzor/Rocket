@@ -24,6 +24,7 @@ function btnClick() {
 var items = document.querySelectorAll(".animal");
 var items2 = document.querySelectorAll(".envi");
 var items3 = document.querySelectorAll(".sub");
+var items4 = document.querySelectorAll(".sand");
 const textarea = document.querySelector('textarea');
 const log = document.getElementById('log');
 var r = document.querySelector(':root');
@@ -55,12 +56,14 @@ function logScroll(e) {
               items3[2].classList.add("in-view");
               items3[3].classList.add("in-view");
               items3[4].classList.add("in-view");
+              items4[0].classList.add("in-view");
             }
           } else if(e.target.scrollTop<=120) {
               items2[i].classList.remove("in-view");
           } if(e.target.scrollTop>=5800) {
             items2[i].classList.remove("in-view");
-        } }
+        } 
+    }
     
     if(e.target.scrollTop>9800){
         document.getElementById('mybtn4').style.setProperty('visibility', 'visible');
@@ -85,6 +88,9 @@ function showDiv() {
     }
     for (var i = 0; i < items3.length; i++){
         items3[i].classList.remove("in-view");
+    }
+    for (var i = 0; i < items4.length; i++){
+        items4[i].classList.remove("in-view");
     }
  }
 
