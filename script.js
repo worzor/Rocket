@@ -35,6 +35,9 @@ var items = document.querySelectorAll(".animal");
 var items2 = document.querySelectorAll(".envi");
 var items3 = document.querySelectorAll(".sub");
 var items4 = document.querySelectorAll(".sand");
+var items5 = document.querySelectorAll(".meso");
+var items6 = document.querySelectorAll(".bathy");
+var items7 = document.querySelectorAll(".abyss")
 const textarea = document.querySelector('textarea');
 const log = document.getElementById('log');
 var r = document.querySelector(':root');
@@ -46,6 +49,9 @@ function logScroll(e) {
     r.style.setProperty('--sizeRs', `${(e.target.scrollTop - 280)/3}px`)
     r.style.setProperty('--sizeTi', `${(e.target.scrollTop - 120)/3}px`)
     r.style.setProperty('--sizeTo', `${(e.target.scrollTop - 120)/3}px`)
+    r.style.setProperty('--sizeMe', `${(e.target.scrollTop - 4800)/3}px`)
+    r.style.setProperty('--sizeBa', `${(e.target.scrollTop - 9800)/3}px`)
+    r.style.setProperty('--sizeAb', `${(e.target.scrollTop - 15000)/3}px`)
     for (var i = 0; i < items.length; i++){
     if (e.target.scrollTop>370) {
         if(!items[i].classList.contains("in-view")){
@@ -74,6 +80,40 @@ function logScroll(e) {
             items2[i].classList.remove("in-view");
         } 
     }
+    for(var i = 0; i < items5.length; i++){
+        if(e.target.scrollTop> 4800){
+            if(!items5[i].classList.contains("in-view")){
+                items5[i].classList.add("in-view");
+            }
+        }else if(e.target.scrollTop<=4800) {
+            items5[i].classList.remove("in-view");
+        }if(e.target.scrollTop>=9800) {
+            items5[i].classList.remove("in-view");
+        }
+        
+    }
+    for(var i = 0; i < items6.length; i++){
+        if(e.target.scrollTop> 9900){
+            if(!items6[i].classList.contains("in-view")){
+                items6[i].classList.add("in-view");
+            }
+        }else if(e.target.scrollTop<=9900) {
+            items6[i].classList.remove("in-view");
+        }if(e.target.scrollTop>=14000) {
+            items6[i].classList.remove("in-view");
+        }
+    }
+    for(var i = 0; i < items7.length; i++){
+        if(e.target.scrollTop> 15000){
+            if(!items7[i].classList.contains("in-view")){
+                items7[i].classList.add("in-view");
+            }
+        }else if(e.target.scrollTop<=15000) {
+            items7[i].classList.remove("in-view");
+        }if(e.target.scrollTop>=22000) {
+            items7[i].classList.remove("in-view");
+        }
+    }
     
     if(e.target.scrollTop>9800){
         document.getElementById('mybtn4').style.setProperty('visibility', 'visible');
@@ -90,6 +130,7 @@ function showDiv() {
     var elmntToView = document.getElementById("parallax");
     elmntToView.scrollIntoView(); 
     document.getElementById("mypopup").style.visibility = "hidden";
+    
     for (var i = 0; i < items.length; i++){
         items[i].classList.remove("in-view");
     }
@@ -101,6 +142,15 @@ function showDiv() {
     }
     for (var i = 0; i < items4.length; i++){
         items4[i].classList.remove("in-view");
+    }
+    for (var i = 0; i < items5.length; i++){
+        items5[i].classList.remove("in-view");
+    }
+    for (var i = 0; i < items6.length; i++){
+        items6[i].classList.remove("in-view");
+    }
+    for (var i = 0; i < items7.length; i++){
+        items7[i].classList.remove("in-view");
     }
  }
 

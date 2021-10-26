@@ -179,6 +179,9 @@ textarea::-webkit-scrollbar {
   --sizeRs: 0px;
   --sizeTi: 0px;
   --sizeTo: 0px;
+  --sizeMe:0px;
+  --sizeBa:0px;
+  --sizeAb:0px;
 }
 #mybtn2 {
   width: 8rem;
@@ -225,6 +228,15 @@ textarea::-webkit-scrollbar {
   bottom: 11vh;
   position: absolute;
 }
+.abyss{
+  display: none;
+}
+.meso{
+  display: none;
+}
+.bathy{
+  display: none;
+}
 .animal {
   display: none;
 }
@@ -244,6 +256,15 @@ textarea::-webkit-scrollbar {
   display: block;
 }
 .sand.in-view {
+  display: block;
+}
+.meso.in-view{
+  display: block;
+}
+.bathy.in-view{
+  display: block;
+}
+.abyss.in-view{
   display: block;
 }
 #tower {
@@ -273,9 +294,102 @@ textarea::-webkit-scrollbar {
   top: 45vh;
   left: -7vw;
   width: calc(var(--sizeT));
-
   transform: scaleX(-1) rotate(10deg)
     translate(calc((var(--sizeT)) * -2.3), calc((var(--sizeT) * (-0.5))));
+}
+#sunfish {
+  position: fixed;
+  top: 65vh;
+  right: -7vw;
+  width: var(--sizeMe);
+  transform: scaleX(1) rotate(0deg)
+    translate(calc((var(--sizeMe)) * -2.3), calc((var(--sizeMe) * (-0.5))));
+}
+#shark {
+  position: fixed;
+  top: -15vh;
+  left: -7vw;
+  width: var(--sizeMe);
+  transform: scaleX(1) rotate(3deg) translate(calc((var(--sizeMe)) * 1.3), calc((var(--sizeMe) * (0.5))));
+}
+#myco {
+  position: fixed;
+  top: 45vh;
+  left: 10vw;
+  width: var(--sizeMe);
+  transform: scaleX(-1) rotate(6deg)
+    translate(calc((var(--sizeMe)) * -2.3), calc((var(--sizeMe) * (-0.5))));
+}
+#whale {
+  position: fixed;
+  top: 99vh;
+  left: -140vw;
+  width: var(--sizeMe);
+  transform: scaleX(-1) rotate(10deg)
+    translate(calc((var(--sizeMe)) * -2.3), calc((var(--sizeMe) * (-0.5))));
+}
+#narwhal {
+  position: fixed;
+  top: 35vh;
+  left: 25vw;
+  width: calc((100px + (var(--sizeBa))) / 1);
+  transform: rotate(30deg) translate(0, 0);
+}
+#lancet {
+  position: fixed;
+  top: 75vh;
+  left: -40vw;
+  width: var(--sizeBa);
+  transform: scaleX(-1) rotate(16deg)
+    translate(calc((var(--sizeBa)) * -2.3), calc((var(--sizeBa) * (-1))));
+}
+#chimera {
+  position: fixed;
+  top: 85vh;
+  left: 77vw;
+  width: calc(var(--sizeBa));
+  transform: scaleX(-1) rotate(45deg)
+    translate(calc((var(--sizeBa)) * -1.7), calc((var(--sizeBa) * (-0.8))));
+}
+#black {
+  position: fixed;
+  top: 65vh;
+  right: -45vw;
+  width: var(--sizeBa);
+  transform: scaleX(1) rotate(7deg)
+    translate(calc((var(--sizeBa)) * -2.3), calc((var(--sizeBa) * (-0.5))));
+}
+#grand {
+  position: fixed;
+  top: 65vh;
+  right: -7vw;
+  width: var(--sizeAb);
+  transform: scaleX(-1) rotate(0deg)
+    translate(calc((var(--sizeAb)) * 2.3), calc((var(--sizeAb) * (-0.5))));
+}
+#dumbo {
+  position: fixed;
+  top: 99vh;
+  left: -140vw;
+  width: var(--sizeAb);
+  transform: scaleX(-1) rotate(10deg)
+    translate(calc((var(--sizeAb)) * -2.3), calc((var(--sizeAb) * (-0.5))));
+}
+#fang {
+  position: fixed;
+  top: 85vh;
+  left: 27vw;
+  width: calc(var(--sizeAb));
+  transform: scaleX(1) rotate(-10deg)
+    translate(calc((var(--sizeAb)) * 1.7), calc((var(--sizeAb) * (-0.8))));
+}
+#angler {
+    position: fixed;
+    top: 25vh;
+    left: -60vw;
+    width: var(--sizeAb);
+    transform: scaleX(-1) rotate(26deg)
+      translate(calc((var(--sizeAb)) * -2.3), calc((var(--sizeAb) * (1))));
 }
 .animal .tooltiptext,
 .envi .tooltiptext {
