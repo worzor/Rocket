@@ -7,123 +7,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <title>Document</title>
+    <title>deepdownastronomically</title>
+
+    <script>
+
+    </script>
 </head>
 
-<body>
-    <section class="firstpage" id="first-page">
-        <img src="images/cover_bg.png" class="cover_bg">
-        <div id="parallax">
-            <div class="proj" id="proj"></div>
-        </div>
-        <input type="image" id="mybtn" onclick="btnClick()" value="Show Div" src="images/btn_discover.png"
-            onMouseOver="this.src='images/btn_discover_hover.png'" onMouseOut="this.src='images/btn_discover.png'">
-        <div class="popupp" id="mypopup">
-            <button type=button id="mybtn2" onclick="showDiv()">นึกนึกนึก</button>
-            <p>คุณเคยดำดิ่งในความรู้สึกตัวเองไหม?<br>
-                ยิ่งนึกยิ่งจมลงไปในความรู้สึกที่หักห้ามไม่ได้ <br> เหมือนดั่งมหาสมุทรที่ยิ่งลึก ทุกอย่างยิ่งดำมืด<br>
-                ยิ่งลึกทุกอย่างก็เริ่มที่จะเลือนลาง ดังนั้นอย่าได้กลัวหรืออะไรไปเลยนะ<br>...<br>
-                เพราะสุดท้ายในความมืดมิดนั้นได้เก็บงำเรื่องราวของหลายๆสิ่งมีชีวิตไว้<br>
-                จงอย่าเชื่อแค่สิ่งที่เห็นแค่ภายนอกหากยังไม่เคยได้ลองลงไปบันทึกเรื่องราวของสิ่งมีชีวิตสุดมหัศจรรย์</p>
+<body onmousemove="onmove()">
+    <section id="first-page">
+        <div style="position: relative; width: 100%; height: 100vh;">
+            <img src="images/cover_bg.png" class="cover_bg">
+            <div id="parallax">
+                <div class="proj" id="proj"></div>
+            </div>
+            <input type="image" id="mybtn" onclick="btnClick()" value="Show Div" src="images/btn_discover.png"
+                onMouseOver="this.src='images/btn_discover_hover.png'" onMouseOut="this.src='images/btn_discover.png'">
+            <div class="popupp" id="mypopup">
+                <div style="align-items: center; display: flex; justify-content: center; width: 100%; height: 100%;">
+                    <p style="display: block;">คุณเคยดำดิ่งในความรู้สึกตัวเองไหม?<br>
+                        ยิ่งนึกยิ่งจมลงไปในความรู้สึกที่หักห้ามไม่ได้ <br> เหมือนดั่งมหาสมุทรที่ยิ่งลึก ทุกอย่างยิ่งดำมืด<br>
+                        ยิ่งลึกทุกอย่างก็เริ่มที่จะเลือนลาง ดังนั้นอย่าได้กลัวหรืออะไรไปเลยนะ<br>...<br>
+                        เพราะสุดท้ายในความมืดมิดนั้นได้เก็บงำเรื่องราวของหลายๆสิ่งมีชีวิตไว้<br>
+                        จงอย่าเชื่อแค่สิ่งที่เห็นแค่ภายนอกหากยังไม่เคยได้ลองลงไปบันทึกเรื่องราวของสิ่งมีชีวิตสุดมหัศจรรย์</p>
+                </div>
+                <a href="start_discovery.html" class="btn fp">รับทราบ!!!</a>
+            </div>
         </div>
     </section>
-    <section class="epi">
-        <div class="sand" id="sand">
-            <img src="images/sand.PNG" alt="">
-        </div>
-        <div class="animal" id="clownfish">
-            <img class="clownfish" src="https://i.ibb.co/gDwf6Bt/Clownfish.png" alt="">
-            <span class="tooltiptext" style="transform: rotate(5deg) scaleX(-1);">ปลาการ์ตูน (Clownfish)
-                <br>รู้หรือไม่? ปลาชนิดนี้มีลักษณะเฉพาะ! คืออาศัยอยู่ในดอกไม้ทะเลที่มีเข็มพิษ
-                แต่ดันไม่อันตรายกับปลาการ์ตูน เพราะต้องการใช้ป้องกันตัวนั่นเอง
-            </span>
-        </div>
-        <div class="envi" id="titanic">
-            <img class="titanic" src="https://i.ibb.co/mXd6mPM/titanic.png" alt="">
-            <span class="tooltiptext">เรือไททานิค (Titanic) <br>เป็นเรือที่มีระวางขับเคลื่อนขนาด 46,428 ตัน
-                ซึ่งเป็นเรือขนาดใหญ่ที่สุดในโลกในขณะนั้น และเคยถูกนับว่าเป็นสิ่งประดิษฐ์ด้วยฝีมือมนุษย์
-                ที่เคลื่อนที่ได้ใหญ่ที่สุดในโลก แต่โชคร้ายที่เรือชนภูเขาน้ำแข็งระหว่างการเดินทาง
-                ทำให้จมลงสู่ก้นมหาสมุทรแอตแลนติก</span>
-        </div>
-        <div class="animal" id="tuna">
-            <img class="tuna" src="https://i.ibb.co/7W67Pd8/Yellowfin-Tuna.png" alt="">
-            <span class="tooltiptext" style="transform: rotate(-10deg) scaleX(-1);">ปลาทูน่าครีบเหลือง (Yellowfin Tuna)
-                <br>เป็นปลาที่มีขนาดใหญ่ถึง 239 เซนติเมตร แต่มันกลายเป็นปลาที่นิยมรับประทานสด
-                และเป็นวัตถุดิบในการทำปลาทูน่าบรรจุกระป๋อง</span>
-        </div>
-
-        <div class="animal" id="reefsh">
-            <img class="reefsh" src="https://i.ibb.co/9TzcVs4/Blacktip-reef-shark.png" alt="">
-            <span class="tooltiptext" style="transform: rotate(20deg) scaleX(-1);">ฉลามครีบดำ (Blacktip Reef Shark)
-                <br>เป็นปลานักล่า โดยใช้วิธีการกระโจนขึ้นเหนือผิวน้ำ แลัวพลิกตัวกลับลงสู่ผิวน้ำด้วยครีบหลัง
-                และฉลามหูดำเป็นปลาที่ชอบติดตามเรือประมงและคอยกินปลาที่ชาวประมงคัดทิ้งจากเรืออีกด้วย</span>
-        </div>
         
-        <div class="envi" id="tower">
-            <img class="tower" src="https://i.ibb.co/pjS9NNR/sak8.png" alt="">
-            <span class="tooltiptext">หอคอยปะการัง (Coral Tower)<br>
-                หรือกลุ่มปะการังที่ก่อตัวในแนวตั้งซึ่งมีความสูงยิ่งกว่าตึกระฟ้าหลายแห่งของโลก
-                ตรงบริเวณด้านเหนือสุดของแนวปะการังเกรทแบร์ริเออร์รีฟ
-                หอคอยปะการังดังกล่าวมีความสูงถึง 500 เมตร ที่ถูกค้นพบโดยทีมสำรวจและทำแผนที่ใต้ทะเลของออสเตรเลีย </span>
-        </div>
-        <div class="meso" id="sunfish">
-            <img class="" src="images/meso/Sunfish.png" alt="">
-        </div>
-        <div class="meso" id="shark">
-            <img class="" src="images/meso/Greenland shark.png" alt="">
-        </div>
-        <div class="meso" id="myco">
-            <img class="" src="images/meso/myctophids.png" alt="">
-        </div>
-        <div class="meso" id="whale">
-            <img class="" src="images/meso/whale shark.png" alt="">
-        </div>
-        <div class="bathy" id="narwhal">
-            <img class="" src="images/bathy/narwhal.png" alt="">
-        </div>
-        <div class="bathy" id="lancet">
-            <img class="" src="images/bathy/Lancet Fish.png" alt="">
-        </div>
-        <div class="bathy" id="chimera">
-            <img class="" src="images/bathy/Chimaera.png" alt="">
-        </div>
-        <div class="bathy" id="black">
-            <img class="" src="images/bathy/Black swallower.png" alt="">
-        </div>
-        <div class="abyss" id="grand">
-            <img class="" src="images/abyss/Bathypterois granlator.png" alt="">
-        </div>
-        <div class="abyss" id="dumbo">
-            <img class="" src="images/abyss/Dumbo octopuses.png" alt="">
-        </div>
-        <div class="abyss" id="fang">
-            <img class="" src="images/abyss/fangtooth.png" alt="">
-        </div>
-        <div class="abyss" id="angler">
-            <img class="" src="images/abyss/humpback anglerfish.png" alt="">
-        </div>
-        <div class="sub" id="leftinner">
-            <img src="images/border-coral/coral-set1-left.png" alt="">
-        </div>
-        <div class="sub" id="leftcoral">
-            <img src="images/border-coral/coral-set3-bottom-left.png" alt="">
-        </div>
-        <div class="sub" id="rightcoral">
-            <img src="images/border-coral/coral-set1-right.png" alt="">
-        </div>
-        <div class="sub" id="topsub">
-            <img src="images/Border (Submarine)/submarine top frame.png" alt="" style="width: 100%;">
-        </div>
-        <div class="sub" id="bottomsub">
-            <img src="images/Border (Submarine)/submarine bottom frame.png" alt="" style="width: 100%;">
-        </div>
-
-    </section>
-    <div id="first" style="display:flex;">
-        <textarea>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 11 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 11 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 11 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 11 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 11 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</textarea>
-        <button id="mybtn3" onclick="showDiv2()">Abort!</button>
-        <button id="mybtn4" onclick="showDiv3()">Spotlight! </button>
-    </div>
 </body>
 <script src="script.js"></script>
 
