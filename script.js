@@ -1,17 +1,28 @@
 var newY = 0;
+var chack_meso = true; var check_bath = true; var check_aby = true;
 function onscrollFunction(){
     newY = parseInt(window.scrollY / 20);
     document.querySelector("#yyy").innerText = newY;
     document.body.style.setProperty("--coral_l_epip", newY * 0.5);
     document.body.style.setProperty("--r_to_l", newY * 0.3);
+    document.body.style.setProperty("--r_to_l2", (newY * 2) - 200);
+    document.body.style.setProperty("--r_to_l3", (newY * 2) - 1000);
     document.body.style.setProperty("--blur", newY);
+    document.body.style.setProperty("--blur2", newY-200);
+    document.body.style.setProperty("--blur3", newY-1000);
     var winH = window.innerHeight;
     if(newY < 200){
         document.querySelector("#name-inner").innerText = 'Epipelagic';
         canvas.dataset.scene = 'epip';
     }if(newY >= 200){
+        document.querySelector("#header-panel").innerText = 'Mesopelagic';
+        document.querySelector("#para-panel").innerText = 'ยินดีที่ได้รู้จัก';
         document.querySelector("#name-inner").innerText = 'Mesopelagic';
         canvas.dataset.scene = 'meso';
+        if(chack_meso == true){
+            chack_meso = false;
+            open_panel();
+        }
     }if(newY >= 1000){
         document.querySelector("#name-inner").innerText = 'Bathypelagic';
         canvas.dataset.scene = 'bath';
@@ -69,8 +80,14 @@ function test(){
     console.log("test");
 }
 
+function open_panel(){
+    var All_text = document.querySelectorAll("#textArea");
+        for(el in All_text){
+            All_text[el].classList.add("active");
+        }
+}
+
 function close_panel(){
-    console.log('asd');
     var All_text = document.querySelectorAll("#textArea");
     for(el in All_text){
         All_text[el].classList.remove("active");
