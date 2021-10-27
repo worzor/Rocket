@@ -3,15 +3,20 @@ function onscrollFunction(){
     newY = parseInt(window.scrollY / 20);
     document.querySelector("#yyy").innerText = newY;
     document.body.style.setProperty("--coral_l_epip", newY * 0.5);
+    document.body.style.setProperty("--r_to_l", newY * 0.3);
     document.body.style.setProperty("--blur", newY);
     var winH = window.innerHeight;
     if(newY < 200){
+        document.querySelector("#name-inner").innerText = 'Epipelagic';
         canvas.dataset.scene = 'epip';
     }if(newY >= 200){
+        document.querySelector("#name-inner").innerText = 'Mesopelagic';
         canvas.dataset.scene = 'meso';
     }if(newY >= 1000){
+        document.querySelector("#name-inner").innerText = 'Bathypelagic';
         canvas.dataset.scene = 'bath';
     }if(newY >= 4000){
+        document.querySelector("#name-inner").innerText = 'Abyssopelagic';
         canvas.dataset.scene = 'aby';
     }
 }
@@ -62,4 +67,12 @@ document.addEventListener('touchmove',update)
 
 function test(){
     console.log("test");
+}
+
+function close_panel(){
+    console.log('asd');
+    var All_text = document.querySelectorAll("#textArea");
+    for(el in All_text){
+        All_text[el].classList.remove("active");
+    }
 }

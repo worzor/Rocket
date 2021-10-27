@@ -2,6 +2,7 @@
 :root{
   --b: 0;
   --coral_l_epip: 0;
+  --r_to_l: 0;
 }
 body {
   margin: 0;
@@ -73,6 +74,62 @@ body {
   transform: translate(0, -300vh);
   transition: 1s;
 }
+.message-panel{
+  position: absolute;
+  width: 0; height: 0;
+  left: 0; top: 0;
+  visibility: hidden;
+}
+.message-panel.active{
+  overflow: auto;
+  position: absolute;
+  border-style: solid;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
+  padding-top: 2vh;
+  margin: auto;
+  min-width: 50vw;
+  min-height: 40vh; box-shadow: inset 0em 0em 3em #001413; color: #8affef;
+  background-color: #007a75; text-align: center;
+  border-radius: 30px;
+  z-index: 500;
+  visibility: visible;
+}
+.warp-txt{
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+.mes-btn{
+  width: 5vw;
+  position: absolute;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  border-style: solid;
+  border-radius: 5px;
+  bottom: 5vh;
+  transition: 0.5s;
+}
+.mes-btn:hover{
+  background-color: #8affef;
+  color: #007a75;
+  transition: 0.5s;
+}
+.bg-panel{
+  width: 0; height: 0;
+  z-index: -20;
+  left: 0; right: 0;
+}
+.bg-panel.active{
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%; height: 100%;
+  position: absolute;
+  z-index: 499;
+}
 .cover-top, .cover-bottom{
   position: fixed;
   min-width: 100vw;
@@ -124,13 +181,20 @@ p {
   padding: 10px 0;
   font-size: max(1.7vw , 25px);
 }
-.meter{
+.meter, .name-tage{
+  position: absolute;
   border-style: solid;
-  width: 20vh;
   height: 6.5vh; box-shadow: inset 0em 0em 3em #001413; color: #8affef;
   background-color: #007a75;
   margin: 6.5vh 5vh ; text-align: center;
   border-radius: 30px;
+}
+.meter{
+  width: 20vh;
+}
+.name-tage{
+  width: 50vw;
+  left: 42.5vh;
 }
 #parallax {
   width: 100%;
@@ -149,14 +213,14 @@ p {
   width: auto;
   height: 100vh;
   position: absolute;
-  z-index: -99;
+  z-index: -100;
   transform: translate(calc(var(--coral_l_epip) * -1px));
 }
 
 #epipelagic .border-coral-r{
   width: auto;
   height: 100vh;
-  z-index: -99;
+  z-index: -100;
   right: 0;
   position: absolute;
   transform: translate(calc(var(--coral_l_epip) * 1px));
@@ -173,24 +237,73 @@ p {
   transform: translate(calc(calc(var(--coral_l_epip) * -1) * 2px));
   filter: blur(calc(var(--blur) * 0.01px));
 }
-
+/*Fish*/
+#fish{
+  position: absolute;
+  z-index: 80;
+  transition: 0.1s;
+}
+#fish:hover{
+  cursor: pointer;
+  transition: 0.5s;
+}
+.clownfish{
+  width: auto;
+  height: 3vw;
+  top: 15vh;
+  right: 10vw;
+  transform: translate(calc(var(--r_to_l) * -12px));
+}
+.blacktip{
+  width: auto;
+  height: 10vw;
+  top: 40vh;
+  left: -13vw;
+  transform: translate(calc(var(--r_to_l) * 17px));
+}
+.tuna{
+  width: auto;
+  height: 7vw;
+  bottom: 20vh;
+  right: -10vw;
+  transform: translate(calc(var(--r_to_l) * -20px));
+}
 /*Item carcass*/
 #carcass{
-  transition: 0.5s;
+  position: absolute;
+  z-index: 0;
 }
 #carcass:hover{
+  cursor: pointer;
   transform: scale(1.1);
   transition: 0.5s;
+  z-index: 0;
 }
 .museo{
-  position: absolute;
   width: auto;
-  height: 40vh;
-  bottom: 2vh;
-  right: 0;
+  max-height: 15vw;
+  min-height: 19vh;
+  bottom: 6vh;
+  right: 2vw;
 }
+.cambay{
+  width: auto;
+  max-height: 15vw;
+  min-height: 19vh;
+  bottom: 6vh;
+  left: 2vw;
+}
+.unknow{
+  width: auto;
+  max-height: 15vw;
+  min-height: 19vh;
+  left: 0;
+  top: 10vh;
+  transform: translate(calc(calc(var(--coral_l_epip) * -1) * 2px));
+}
+
 /*Old code*/
-#rightcoral {
+#rightcoral{
   position: fixed;
   width: 30%;
   right: -3vw;
@@ -369,243 +482,3 @@ textarea::-webkit-scrollbar {
   bottom: 11vh;
   position: absolute;
 }
-<<<<<<< Updated upstream
-.abyss{
-  display: none;
-}
-.meso{
-  display: none;
-}
-.bathy{
-  display: none;
-}
-.animal {
-  display: none;
-}
-.envi {
-  display: none;
-}
-.sub {
-  display: none;
-}
-.animal.in-view {
-  display: block;
-}
-.envi.in-view {
-  display: block;
-}
-.sub.in-view {
-  display: block;
-}
-.sand.in-view {
-  display: block;
-}
-.meso.in-view{
-  display: block;
-}
-.bathy.in-view{
-  display: block;
-}
-.abyss.in-view{
-  display: block;
-}
-#tower {
-  position: fixed;
-  top: 37vh;
-  left: 28vw;
-  width: calc(200px + (var(--sizeTo)));
-  transform: scaleX(-1) translate(calc((var(--sizeTo)) * 1), 0);
-}
-#titanic {
-  position: fixed;
-  top: 40vh;
-  left: 45vw;
-  width: calc((100px + (var(--sizeTi))) / 1);
-  transform: translate(0, 0);
-}
-#clownfish {
-  position: fixed;
-  top: 50vh;
-  right: 40vw;
-  width: calc(var(--size));
-  transform: scaleX(-1) rotate(-5deg)
-    translate(calc((var(--sizeT)) * -2.3), calc((var(--sizeT) * (0.5))));
-}
-#tuna {
-  position: fixed;
-  top: 45vh;
-  left: -7vw;
-  width: calc(var(--sizeT));
-  transform: scaleX(-1) rotate(10deg)
-    translate(calc((var(--sizeT)) * -2.3), calc((var(--sizeT) * (-0.5))));
-}
-#sunfish {
-  position: fixed;
-  top: 65vh;
-  right: -7vw;
-  width: var(--sizeMe);
-  transform: scaleX(1) rotate(0deg)
-    translate(calc((var(--sizeMe)) * -2.3), calc((var(--sizeMe) * (-0.5))));
-}
-#shark {
-  position: fixed;
-  top: -15vh;
-  left: -7vw;
-  width: var(--sizeMe);
-  transform: scaleX(1) rotate(3deg) translate(calc((var(--sizeMe)) * 1.3), calc((var(--sizeMe) * (0.5))));
-}
-#myco {
-  position: fixed;
-  top: 45vh;
-  left: 10vw;
-  width: var(--sizeMe);
-  transform: scaleX(-1) rotate(6deg)
-    translate(calc((var(--sizeMe)) * -2.3), calc((var(--sizeMe) * (-0.5))));
-}
-#whale {
-  position: fixed;
-  top: 99vh;
-  left: -140vw;
-  width: var(--sizeMe);
-  transform: scaleX(-1) rotate(10deg)
-    translate(calc((var(--sizeMe)) * -2.3), calc((var(--sizeMe) * (-0.5))));
-}
-#narwhal {
-  position: fixed;
-  top: 35vh;
-  left: 25vw;
-  width: calc((100px + (var(--sizeBa))) / 1);
-  transform: rotate(30deg) translate(0, 0);
-}
-#lancet {
-  position: fixed;
-  top: 75vh;
-  left: -40vw;
-  width: var(--sizeBa);
-  transform: scaleX(-1) rotate(16deg)
-    translate(calc((var(--sizeBa)) * -2.3), calc((var(--sizeBa) * (-1))));
-}
-#chimera {
-  position: fixed;
-  top: 85vh;
-  left: 77vw;
-  width: calc(var(--sizeBa));
-  transform: scaleX(-1) rotate(45deg)
-    translate(calc((var(--sizeBa)) * -1.7), calc((var(--sizeBa) * (-0.8))));
-}
-#black {
-  position: fixed;
-  top: 65vh;
-  right: -45vw;
-  width: var(--sizeBa);
-  transform: scaleX(1) rotate(7deg)
-    translate(calc((var(--sizeBa)) * -2.3), calc((var(--sizeBa) * (-0.5))));
-}
-#grand {
-  position: fixed;
-  top: 65vh;
-  right: -7vw;
-  width: var(--sizeAb);
-  transform: scaleX(-1) rotate(0deg)
-    translate(calc((var(--sizeAb)) * 2.3), calc((var(--sizeAb) * (-0.5))));
-}
-#dumbo {
-  position: fixed;
-  top: 99vh;
-  left: -140vw;
-  width: var(--sizeAb);
-  transform: scaleX(-1) rotate(10deg)
-    translate(calc((var(--sizeAb)) * -2.3), calc((var(--sizeAb) * (-0.5))));
-}
-#fang {
-  position: fixed;
-  top: 85vh;
-  left: 27vw;
-  width: calc(var(--sizeAb));
-  transform: scaleX(1) rotate(-10deg)
-    translate(calc((var(--sizeAb)) * 1.7), calc((var(--sizeAb) * (-0.8))));
-}
-#angler {
-    position: fixed;
-    top: 25vh;
-    left: -60vw;
-    width: var(--sizeAb);
-    transform: scaleX(-1) rotate(26deg)
-      translate(calc((var(--sizeAb)) * -2.3), calc((var(--sizeAb) * (1))));
-}
-.animal .tooltiptext,
-.envi .tooltiptext {
-  visibility: hidden;
-  width: 250px;
-  background-color: rgba(255, 255, 255, 0.274);
-  color: black;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 99999;
-}
-.animal:hover .tooltiptext,
-.envi:hover .tooltiptext {
-  visibility: visible;
-}
-#reefsh {
-  position: fixed;
-  top: 85vh;
-  left: 67vw;
-  width: var(--sizeRs);
-  transform: scaleX(-1) rotate(-20deg)
-    translate(calc((var(--sizeRs)) * 1.5), calc((var(--sizeRs) * (-0.2))));
-}
-img {
-  width: 100%;
-  height: auto;
-}
-.clownfish,
-.titanic,
-.tuna,
-.reefsh,
-.tower {
-  transition: transform 0.8s ease;
-}
-.clownfish:hover,
-.titanic:hover,
-.tuna:hover,
-.reefsh:hover,
-.tower:hover {
-  transform: scale(1.3);
-}
-@media (min-width: 1600px) {
-  #rightcoral {
-    position: fixed;
-  
-    width: 40%;
-    right: -5vw;
-    bottom: 16vh;
-    transform: translate(calc(((var(--sizeTo)) * (0.16))), 0);
-  }
-  #leftinner {
-    position: fixed;
-    width: 40%;
-    left: -1vw;
-    bottom: 15vh;
-    transform: translate(
-      calc(((var(--sizeTo)) * (-0.1))),
-      0
-    );
-  }
-  #leftcoral {
-    position: fixed;
-    width: 50%;
-    left: -3vw;
-    bottom: 15vh;
-    transform: translate(
-      calc(((var(--sizeTo)) * (-0.1))),
-      calc(((var(--sizeTo)) * (0.1)))
-    );
-  }
-}
-=======
->>>>>>> Stashed changes
