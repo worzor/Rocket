@@ -60,4 +60,6 @@ document.addEventListener('touchmove',update)
 
 
 
-
+function test(){
+    console.log("test");
+}
