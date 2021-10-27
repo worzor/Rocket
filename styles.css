@@ -435,3 +435,33 @@ img {
 .tower:hover {
   transform: scale(1.3);
 }
+@media (min-width: 1600px) {
+  #rightcoral {
+    position: fixed;
+  
+    width: 40%;
+    right: -5vw;
+    bottom: 16vh;
+    transform: translate(calc(((var(--sizeTo)) * (0.16))), 0);
+  }
+  #leftinner {
+    position: fixed;
+    width: 40%;
+    left: -1vw;
+    bottom: 15vh;
+    transform: translate(
+      calc(((var(--sizeTo)) * (-0.1))),
+      0
+    );
+  }
+  #leftcoral {
+    position: fixed;
+    width: 50%;
+    left: -3vw;
+    bottom: 15vh;
+    transform: translate(
+      calc(((var(--sizeTo)) * (-0.1))),
+      calc(((var(--sizeTo)) * (0.1)))
+    );
+  }
+}
