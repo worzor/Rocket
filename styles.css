@@ -1,20 +1,139 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;300&display=swap");
+:root{
+  --b: 0;
+  --coral_l_epip: 0;
+}
 body {
   margin: 0;
   background-color: #1d1e22;
   z-index: 20;
-  overflow: hidden;
+  overflow: visible;
   font-family: "Kanit", sans-serif;
   font-weight: 300;
+}
+#post {
+	font-size: 3em;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #fffc;
+	z-index: 999;
+}
+.screen-play{
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+#epipelagic{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+#mesopelagic{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+#bathypelagic{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+#abyssopelagic{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+#canvas[data-scene="epip"] #epipelagic,
+#canvas[data-scene="epip"] #mesopelagic,
+#canvas[data-scene="epip"] #abyssopelagic,
+#canvas[data-scene="epip"] #bathypelagic{
+  transition: 1s;
+}
+
+#canvas[data-scene="meso"] #epipelagic,
+#canvas[data-scene="meso"] #mesopelagic,
+#canvas[data-scene="meso"] #abyssopelagic,
+#canvas[data-scene="meso"] #bathypelagic{
+  transform: translate(0, -100vh);
+  transition: 1s;
+}
+#canvas[data-scene="bath"] #epipelagic,
+#canvas[data-scene="bath"] #mesopelagic,
+#canvas[data-scene="bath"] #abyssopelagic,
+#canvas[data-scene="bath"] #bathypelagic{
+  transform: translate(0, -200vh);
+  transition: 1s;
+}
+#canvas[data-scene="aby"] #epipelagic,
+#canvas[data-scene="aby"] #mesopelagic,
+#canvas[data-scene="aby"] #bathypelagic,
+#canvas[data-scene="aby"] #abyssopelagic{
+  transform: translate(0, -300vh);
+  transition: 1s;
+}
+.cover-top, .cover-bottom{
+  position: fixed;
+  min-width: 100vw;
+  z-index: 20;
+}
+.cover-top{
+  top: -3vh;
+  height: 15vh;
+}
+.cover-bottom{
+  bottom: -6vh;
+  height: 20vh;
+}
+.cover-page{
+  width: 100%;
+  height: 15vh;
+  position: absolute;
+  filter: blur(calc(var(--blur) * 0.01px));
+}
+.top{
+  top: 0;
+}
+.bottom{
+  bottom: 0;
+}
+#second-page{
+  height: 120vh;
+}
+.warp{
+  height: calc(2500vh * 10);
+  mix-blend-mode: multiply;
+  background: linear-gradient(0deg, rgba(0,9,16,1) 0%, rgba(0,37,65,1) 94%, rgba(0,65,114,1) 95%, rgba(0,121,212,1) 99.2%, rgba(6,148,255,1) 99.5%, rgba(104,190,255,1) 99.8%, rgba(201,232,254,1) 100%);
+}
+.inactive{
+  height: 0;
+  width: 0;
+  visibility: hidden;
 }
 p {
   font-size: 20px;
   text-align: center;
   top: 20%;
-  position: absolute;
+}
+.panel{
+  font-family: 'Roboto Slab', serif; font-weight: 500;
+  width: 100%; align-items: center; position: absolute; z-index: 80;
+}
+.panel h1{
+  margin: 0;
+  padding: 10px 0;
+  font-size: max(1.7vw , 25px);
+}
+.meter{
+  border-style: solid;
+  width: 20vh;
+  height: 6.5vh; box-shadow: inset 0em 0em 3em #001413; color: #8affef;
+  background-color: #007a75;
+  margin: 6.5vh 5vh ; text-align: center;
+  border-radius: 30px;
 }
 #parallax {
-  position: relative;
   width: 100%;
   height: 100vh;
   background-size: 98% 98%;
@@ -26,48 +145,39 @@ p {
   z-index: -20;
 }
 
-#topsub {
-  position: fixed;
-  width: 100vw;
-  top: 0vh;
-  left: 0vw;
-}
-#bottomsub {
-  position: fixed;
-  width: 100vw;
-  bottom: -1vh;
-  left: 0vw;
-}
-#sand {
-  position: fixed;
-  width: 100%;
-  bottom: -25vh;
-  transform: translate(0, calc(((var(--sizeTo)) * (0.15))));
-}
-#leftinner {
-  position: fixed;
-  width: 40%;
-  left: -1vw;
-  bottom: 15vh;
-  transform: translate(
-    calc(((var(--sizeTo)) * (-0.1))),
-    calc(((var(--sizeTo)) * (0.05)))
-  );
+#epipelagic .border-coral-l{
+  filter: blur(calc(var(--blur) * 0.03px));
+  width: auto;
+  height: 100vh;
+  position: absolute;
+  z-index: -99;
+  transform: translate(calc(var(--coral_l_epip) * -1px));
 }
 
-#leftcoral {
-  position: fixed;
-  width: 50%;
-  left: -2vw;
-  bottom: 18vh;
-  transform: translate(
-    calc(((var(--sizeTo)) * (-0.1))),
-    calc(((var(--sizeTo)) * (0.1)))
-  );
+#epipelagic .border-coral-r{
+  width: auto;
+  height: 100vh;
+  z-index: -99;
+  right: 0;
+  position: absolute;
+  transform: translate(calc(var(--coral_l_epip) * 1px));
+  filter: blur(calc(var(--blur) * 0.02px));
+
 }
+
+#epipelagic .border-coral-bl{
+  width: auto; z-index: -98;
+  left: -25px;
+  bottom: 10vh;
+  height: 50vh;
+  position: absolute;
+  transform: translate(calc(calc(var(--coral_l_epip) * -1) * 2px));
+  filter: blur(calc(var(--blur) * 0.01px));
+}
+
+/*Old code*/
 #rightcoral {
   position: fixed;
-
   width: 30%;
   right: -3vw;
   bottom: 10vh;
@@ -105,8 +215,8 @@ p {
 .cover_bg {
   width: 100%;
   height: 100vh;
-  background-size: cover;
   position: absolute;
+  background-size: cover;
 }
 #mybtn {
   width: 300px;
@@ -117,6 +227,23 @@ p {
   margin: 0;
   z-index: 10;
   transition: 2s;
+}
+
+.btn{
+  background-color: #fff;
+  height: 40px;
+  width: 100px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #1d1e22;
+  color: inherit;
+}
+
+.btn.fp{
+  bottom: 0; position: absolute; margin-bottom: 100px;
 }
 
 .popupp {
@@ -228,6 +355,7 @@ textarea::-webkit-scrollbar {
   bottom: 11vh;
   position: absolute;
 }
+<<<<<<< Updated upstream
 .abyss{
   display: none;
 }
@@ -465,3 +593,5 @@ img {
     );
   }
 }
+=======
+>>>>>>> Stashed changes
