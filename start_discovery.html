@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
     <title>Star Discovery</title>
 </head>
 <body onscroll="onscrollFunction()" id="second-page">
+    <div id="flashlightTurn" class="flashlight"></div>
     <div class="warp blen-bg">
         <div class="screen-play" id="canvas" data-scene="epip">
             <img class="cover-top" src="./images/Border (Submarine)/submarine top frame.png">
@@ -22,6 +23,11 @@
                     <h1 id="name-inner">Epipelagic</h1>
                 </div>
             </div>
+            <div id="fishInfo" class="message-panel-fish">
+                <h1 id="fish_header">ข้อมูลปลา</h1>
+                <p id="fish_para">กรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูล</p>
+            </div>
+            <a id="flashlightBtn" onclick="flashlight()" class="flashlight_btn"><h1>Spotlight</h1></a>
             <div id="textArea" class="message-panel active">
                 <div class="warp-txt" style="padding: 0 3vh;">
                     <h1 id="header-panel">Epipelagic</h1>
@@ -38,7 +44,7 @@
                 <img class="cover-page one bottom" src="./images/birt garbage.png">
                 <img id="carcass" class="museo" onclick="" src="./images/carcass/museo.png">
                 <img id="carcass" class="cambay" onclick="" src="./images/carcass/cambay.png">
-                <img id="fish" class="clownfish" src="./images/epip/Clownfish.png">
+                <img id="fish" class="clownfish" onclick="fish_info(1)" src="./images/epip/Clownfish.png">
                 <img id="fish" class="blacktip" src="./images/epip/Blacktip-reef-shark.png">
                 <img id="fish" class="tuna" src="./images/epip/Yellowfin-Tuna.png">
             </div>

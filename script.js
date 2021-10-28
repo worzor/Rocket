@@ -93,3 +93,22 @@ function close_panel(){
         All_text[el].classList.remove("active");
     }
 }
+
+function fish_info(fish){
+    if(fish == 1){
+        document.querySelector("#fish_header").innerText = "ปลาการ์ตูน";
+        document.querySelector("#fish_para").innerText = "ข้อมูลทั่วไปของปลาการ์ตูน";
+    }
+}
+var check_FL = 0
+function flashlight(){
+    if(check_FL == 0){
+        document.getElementById("flashlightTurn").classList.add("active");
+        document.getElementById("flashlightBtn").classList.add("active");
+        check_FL = 1;
+    } else if(check_FL == 1){
+        document.getElementById("flashlightTurn").classList.remove("active");
+        document.getElementById("flashlightBtn").classList.remove("active");
+        check_FL = 0;
+    }
+}
