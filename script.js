@@ -15,20 +15,33 @@ function onscrollFunction(){
         document.querySelector("#name-inner").innerText = 'Epipelagic';
         canvas.dataset.scene = 'epip';
     }if(newY >= 200){
-        document.querySelector("#header-panel").innerText = 'Mesopelagic';
-        document.querySelector("#para-panel").innerText = 'ยินดีที่ได้รู้จัก';
-        document.querySelector("#name-inner").innerText = 'Mesopelagic';
         canvas.dataset.scene = 'meso';
         if(chack_meso == true){
+            document.querySelector("#header-panel").innerText = 'Mesopelagic';
+            document.querySelector("#para-panel").innerText = 'ยินดีที่ได้รู้จัก';
+            document.querySelector("#name-inner").innerText = 'Mesopelagic';
             chack_meso = false;
             open_panel();
         }
     }if(newY >= 1000){
-        document.querySelector("#name-inner").innerText = 'Bathypelagic';
         canvas.dataset.scene = 'bath';
+        if(check_bath == true){
+            document.querySelector("#header-panel").innerText = 'Bathypelagic';
+            document.querySelector("#para-panel").innerText = 'ยินดีที่ได้รู้จัก';
+            document.querySelector("#name-inner").innerText = 'Bathypelagic';
+            check_bath = false;
+            open_panel();
+        }
+        
     }if(newY >= 4000){
-        document.querySelector("#name-inner").innerText = 'Abyssopelagic';
         canvas.dataset.scene = 'aby';
+        if(check_aby == true){
+            document.querySelector("#header-panel").innerText = 'Abyssopelagic';
+            document.querySelector("#para-panel").innerText = 'ยินดีที่ได้รู้จัก';
+            document.querySelector("#name-inner").innerText = 'Abyssopelagic';
+            check_aby = false;
+            open_panel();
+        }
     }
 }
 function onmove() {
@@ -94,12 +107,6 @@ function close_panel(){
     }
 }
 
-function fish_info(fish){
-    if(fish == 1){
-        document.querySelector("#fish_header").innerText = "ปลาการ์ตูน";
-        document.querySelector("#fish_para").innerText = "ข้อมูลทั่วไปของปลาการ์ตูน";
-    }
-}
 var check_FL = 0
 function flashlight(){
     if(check_FL == 0){
@@ -110,5 +117,21 @@ function flashlight(){
         document.getElementById("flashlightTurn").classList.remove("active");
         document.getElementById("flashlightBtn").classList.remove("active");
         check_FL = 0;
+    }
+}
+/*Function ของปลา เเละ สิ่งก่อสร้าง*/
+
+function fish_info(fish){
+    if(fish == 1){
+        document.querySelector("#fish_header").innerText = "ปลาการ์ตูน";
+        document.querySelector("#fish_para").innerText = "ข้อมูลทั่วไปของปลาการ์ตูน";
+    }
+}
+
+function carcass_info(carcass){
+    if(carcass == 1){
+        document.querySelector("#header-panel").innerText = "museo";
+        document.querySelector("#para-panel").innerText = "ข้อมูลทั่วไปของสิ่งใต้น้ำ";
+        open_panel();
     }
 }

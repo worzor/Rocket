@@ -255,6 +255,9 @@ p {
   padding: 10px 0;
   font-size: max(1.7vw , 25px);
 }
+#textArea h1{
+  font-family: 'Roboto Slab', serif;
+}
 .meter, .name-tage{
   position: absolute;
   border-style: solid;
