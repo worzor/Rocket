@@ -1,20 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;300&display=swap");
-:root{
-  --blur:0;
-  --blur2:0;
-  --blur3:0;
+:root {
+  --blur: 0;
+  --blur2: 0;
+  --blur3: 0;
   --b: 0;
   --coral_l_epip: 0;
   --r_to_l: 0;
   --r_to_l2: 0;
   --r_to_l3: 0;
+  --r_to_l4: 0;
   --fishY: 0;
   --cursorX: 50vw;
   --cursorY: 50vh;
 }
 .flashlight.active {
   cursor: none;
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 100%;
@@ -23,10 +24,10 @@
   z-index: 10;
   background: radial-gradient(
     circle 10vmax at var(--cursorX) var(--cursorY),
-    rgba(0,0,0,0) 0%,
-    rgba(0,0,0,.5) 80%,
-    rgba(0,0,0,.95) 100%
-  )
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5) 80%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
 }
 body {
   margin: 0;
@@ -37,38 +38,38 @@ body {
   font-weight: 300;
 }
 #post {
-	font-size: 3em;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background: #fffc;
-	z-index: 999;
+  font-size: 3em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fffc;
+  z-index: 999;
 }
-.screen-play{
+.screen-play {
   height: 100vh;
   width: 100%;
   position: fixed;
   overflow: hidden;
 }
-#epipelagic{
+#epipelagic {
   height: 100%;
   width: 100%;
   overflow: hidden;
   position: relative;
 }
-#mesopelagic{
+#mesopelagic {
   position: relative;
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
-#bathypelagic{
+#bathypelagic {
   height: 100%;
   width: 100%;
   overflow: hidden;
   position: relative;
 }
-#abyssopelagic{
+#abyssopelagic {
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -77,38 +78,40 @@ body {
 #canvas[data-scene="epip"] #epipelagic,
 #canvas[data-scene="epip"] #mesopelagic,
 #canvas[data-scene="epip"] #abyssopelagic,
-#canvas[data-scene="epip"] #bathypelagic{
+#canvas[data-scene="epip"] #bathypelagic {
   transition: 1s;
 }
 
 #canvas[data-scene="meso"] #epipelagic,
 #canvas[data-scene="meso"] #mesopelagic,
 #canvas[data-scene="meso"] #abyssopelagic,
-#canvas[data-scene="meso"] #bathypelagic{
+#canvas[data-scene="meso"] #bathypelagic {
   transform: translate(0, -100vh);
   transition: 1s;
 }
 #canvas[data-scene="bath"] #epipelagic,
 #canvas[data-scene="bath"] #mesopelagic,
 #canvas[data-scene="bath"] #abyssopelagic,
-#canvas[data-scene="bath"] #bathypelagic{
+#canvas[data-scene="bath"] #bathypelagic {
   transform: translate(0, -200vh);
   transition: 1s;
 }
 #canvas[data-scene="aby"] #epipelagic,
 #canvas[data-scene="aby"] #mesopelagic,
 #canvas[data-scene="aby"] #bathypelagic,
-#canvas[data-scene="aby"] #abyssopelagic{
+#canvas[data-scene="aby"] #abyssopelagic {
   transform: translate(0, -300vh);
   transition: 1s;
 }
-.message-panel{
+.message-panel {
   position: absolute;
-  width: 0; height: 0;
-  left: 0; top: 0;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
   visibility: hidden;
 }
-.message-panel-fish{
+.message-panel-fish {
   overflow: auto;
   position: absolute;
   border-style: solid;
@@ -116,33 +119,41 @@ body {
   bottom: 0;
   left: 34%;
   width: 30vw;
-  height: 20vh; box-shadow: inset 0em 0em 3em #381e00; color: #ffbf8a;
-  background-color: #7a4500; text-align: center;
+  height: 20vh;
+  box-shadow: inset 0em 0em 3em #381e00;
+  color: #ffbf8a;
+  background-color: #7a4500;
+  text-align: center;
   border-radius: 30px;
   z-index: 30;
   visibility: visible;
 }
-.message-panel.active{
+.message-panel.active {
   overflow: auto;
   position: absolute;
   border-style: solid;
-  left: 0; right: 0;
-  top: 0; bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   padding-top: 2vh;
   margin: auto;
   min-width: 50vw;
-  min-height: 40vh; box-shadow: inset 0em 0em 3em #001413; color: #8affef;
-  background-color: #007a75; text-align: center;
+  min-height: 40vh;
+  box-shadow: inset 0em 0em 3em #001413;
+  color: #8affef;
+  background-color: #007a75;
+  text-align: center;
   border-radius: 30px;
   z-index: 500;
   visibility: visible;
 }
-.warp-txt{
+.warp-txt {
   align-items: center;
   height: 100%;
   overflow: hidden;
 }
-.mes-btn{
+.mes-btn {
   width: 5vw;
   position: absolute;
   cursor: pointer;
@@ -156,17 +167,19 @@ body {
   bottom: 5vh;
   transition: 0.5s;
 }
-.mes-btn:hover{
+.mes-btn:hover {
   background-color: #8affef;
   color: #007a75;
   transition: 0.5s;
 }
-.flashlight_btn h1{
+.flashlight_btn h1 {
   margin: 0;
 }
-.flashlight_btn{
-  box-shadow: inset 0em 0em 3em #001413; color: #3bec44;
-  background-color: #0a7a00; text-align: center;
+.flashlight_btn {
+  box-shadow: inset 0em 0em 3em #001413;
+  color: #3bec44;
+  background-color: #0a7a00;
+  text-align: center;
   cursor: pointer;
   border-style: solid;
   position: absolute;
@@ -179,64 +192,81 @@ body {
   padding: 10px;
   font-weight: 400 !important;
 }
-.flashlight_btn:hover{
-  box-shadow: inset 0em 0em 3em #141300; color: #fff020;
-  background-color: #7a6e00; text-align: center;
+.flashlight_btn:hover {
+  box-shadow: inset 0em 0em 3em #141300;
+  color: #fff020;
+  background-color: #7a6e00;
+  text-align: center;
   transition: 1s;
 }
-.flashlight_btn.active{
-  box-shadow: inset 0em 0em 3em #001413; color: #ec473b;
-  background-color: #7a0000; text-align: center;
+.flashlight_btn.active {
+  box-shadow: inset 0em 0em 3em #001413;
+  color: #ec473b;
+  background-color: #7a0000;
+  text-align: center;
 }
-.bg-panel{
-  width: 0; height: 0;
+.bg-panel {
+  width: 0;
+  height: 0;
   z-index: -20;
-  left: 0; right: 0;
+  left: 0;
+  right: 0;
 }
-.bg-panel.active{
+.bg-panel.active {
   background-color: rgba(255, 255, 255, 0.5);
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   position: absolute;
   z-index: 499;
 }
-.cover-top, .cover-bottom{
+.cover-top,
+.cover-bottom {
   position: fixed;
   min-width: 100vw;
   z-index: 20;
 }
-.cover-top{
+.cover-top {
   top: -3vh;
   height: 15vh;
 }
-.cover-bottom{
+.cover-bottom {
   bottom: -6vh;
   height: 20vh;
 }
-.cover-page{
+.cover-page {
   width: 100%;
   height: 16vh;
   position: absolute;
 }
-.cover-page.one{
+.cover-page.one {
   filter: blur(calc(var(--blur) * 0.01px));
 }
-.cover-page.two{
+.cover-page.two {
   filter: blur(calc(var(--blur2) * 0.001px));
 }
-.top{
+.top {
   top: 0;
 }
-.bottom{
+.bottom {
   bottom: -1.5vh;
 }
-#second-page{
+#second-page {
   height: 120vh;
 }
-.warp{
+.warp {
   height: calc(2500vh * 10);
-  background: linear-gradient(0deg, rgba(0,9,16,1) 0%, rgba(0,37,65,1) 94%, rgba(0,65,114,1) 95%, rgba(0,121,212,1) 99.2%, rgba(6,148,255,1) 99.5%, rgba(104,190,255,1) 99.8%, rgba(201,232,254,1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 9, 16, 1) 0%,
+    rgba(0, 37, 65, 1) 94%,
+    rgba(0, 65, 114, 1) 95%,
+    rgba(0, 121, 212, 1) 99.2%,
+    rgba(6, 148, 255, 1) 99.5%,
+    rgba(104, 190, 255, 1) 99.8%,
+    rgba(201, 232, 254, 1) 100%
+  );
 }
-.inactive{
+.inactive {
   height: 0;
   width: 0;
   visibility: hidden;
@@ -246,30 +276,38 @@ p {
   text-align: center;
   top: 20%;
 }
-.panel{
-  font-family: 'Roboto Slab', serif; font-weight: 500;
-  width: 100%; align-items: center; position: absolute; z-index: 80;
+.panel {
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+  width: 100%;
+  align-items: center;
+  position: absolute;
+  z-index: 80;
 }
-.panel h1{
+.panel h1 {
   margin: 0;
   padding: 10px 0;
-  font-size: max(1.7vw , 25px);
+  font-size: max(1.7vw, 25px);
 }
-#textArea h1{
-  font-family: 'Roboto Slab', serif;
+#textArea h1 {
+  font-family: "Roboto Slab", serif;
 }
-.meter, .name-tage{
+.meter,
+.name-tage {
   position: absolute;
   border-style: solid;
-  height: 6.5vh; box-shadow: inset 0em 0em 3em #001413; color: #8affef;
+  height: 6.5vh;
+  box-shadow: inset 0em 0em 3em #001413;
+  color: #8affef;
   background-color: #007a75;
-  margin: 6.5vh 5vh ; text-align: center;
+  margin: 6.5vh 5vh;
+  text-align: center;
   border-radius: 30px;
 }
-.meter{
+.meter {
   width: 20vh;
 }
-.name-tage{
+.name-tage {
   width: 50vw;
   left: 42.5vh;
 }
@@ -285,22 +323,23 @@ p {
   z-index: -20;
 }
 
-#epipelagic .border-coral-l, #mesopelagic .border-coral-l{
+#epipelagic .border-coral-l,
+#mesopelagic .border-coral-l {
   width: auto;
   height: 100vh;
   position: absolute;
   z-index: -100;
 }
 
-#epipelagic .border-coral-l{
+#epipelagic .border-coral-l {
   filter: blur(calc(var(--blur) * 0.03px));
   transform: translate(calc(var(--coral_l_epip) * -1px));
 }
-#mesopelagic .border-coral-l{
+#mesopelagic .border-coral-l {
   filter: blur(calc(var(--blur2) * 0.005px));
   transform: translate(calc(var(--coral_l_epip) * -0.5px));
 }
-#epipelagic .border-coral-r{
+#epipelagic .border-coral-r {
   width: auto;
   height: 100vh;
   z-index: -100;
@@ -308,11 +347,11 @@ p {
   position: absolute;
   transform: translate(calc(var(--coral_l_epip) * 1px));
   filter: blur(calc(var(--blur) * 0.02px));
-
 }
 
-#epipelagic .border-coral-bl{
-  width: auto; z-index: -98;
+#epipelagic .border-coral-bl {
+  width: auto;
+  z-index: -98;
   left: -25px;
   bottom: 10vh;
   height: 50vh;
@@ -321,26 +360,26 @@ p {
   filter: blur(calc(var(--blur) * 0.01px));
 }
 
-#mesopelagic .border-coral-tr{
+#mesopelagic .border-coral-tr {
   position: absolute;
   right: 0;
   transform: translate(calc(calc(var(--coral_l_epip) * 1) * 0.5px));
   filter: blur(calc(var(--blur2) * 0.01px));
 }
-#mesopelagic .border-coral-tl{
+#mesopelagic .border-coral-tl {
   position: absolute;
   left: 0;
   transform: translate(calc(calc(var(--coral_l_epip) * -1) * 0.7px));
   filter: blur(calc(var(--blur) * 0.01px));
 }
-#bathypelagic .border-coral-br{
+#bathypelagic .border-coral-br {
   position: absolute;
   right: 0;
   bottom: 0;
   transform: translate(calc(calc(var(--r_to_l3) * -0.1) * -0.5px));
   filter: blur(calc(var(--blur3) * 0.005px));
 }
-#bathypelagic .border-coral-tl{
+#bathypelagic .border-coral-tl {
   position: absolute;
   left: 0;
   top: 0;
@@ -348,52 +387,58 @@ p {
   filter: blur(calc(var(--blur3) * 0.005px));
 }
 /*Fish*/
-#fish{
+#fish {
   position: absolute;
   z-index: 80;
   transition: 0.1s;
 }
 
-#fish:hover{
+#fish:hover {
   cursor: pointer;
   transition: 0.5s;
 }
-.clownfish{
+.clownfish {
   width: auto;
   height: 3vw;
   top: 15vh;
   right: 10vw;
   transform: translate(calc(var(--r_to_l) * -12px), calc(var(--fishY) * 1px));
 }
-.blacktip{
+.blacktip {
   width: auto;
   height: 10vw;
   top: 40vh;
   left: -13vw;
   transform: translate(calc(var(--r_to_l) * 17px));
 }
-.tuna{
+.tuna {
   width: auto;
   height: 7vw;
   bottom: 20vh;
   right: -10vw;
   transform: translate(calc(var(--r_to_l) * -20px));
 }
-.oarfish{
+.oarfish {
   width: auto;
   height: 11vw;
   bottom: 20vh;
   right: 5vw;
-  transform: translate(calc(var(--r_to_l2) * -0.3px), calc(var(--r_to_l2) * -1px));
+  transform: translate(
+    calc(var(--r_to_l2) * -0.3px),
+    calc(var(--r_to_l2) * -1px)
+  );
 }
-.sunfish{
+.sunfish {
   width: auto;
   height: 20vw;
   bottom: -20vh;
   right: 30vw;
-  transform: translate(calc(var(--r_to_l2) * -0.5px), calc(var(--r_to_l2) * -0.5px));
+  transform: translate(
+    calc(var(--r_to_l2) * -0.5px),
+    calc(var(--r_to_l2) * -0.5px)
+  );
 }
-.whaleShark{
+.whaleShark {
   width: auto;
   height: 15vw;
   bottom: 20vh;
@@ -401,40 +446,80 @@ p {
   transform: translate(calc(var(--r_to_l2) * 1.5px));
 }
 
-.myctophids{
-  position: absolute;
+.myctophids {
   width: auto;
   height: 2vw;
   top: 50vh;
   right: -50vw;
   transform: translate(calc(var(--r_to_l2) * -3px));
 }
+.lancet {
+  width: auto;
+  height: 13vw;
+  top: 10vh;
+  right: 0.5vw;
+  transform: translate(
+    calc(var(--r_to_l4) * -0.5px),
+    calc(var(--r_to_l4) * 0.5px)
+  );
+}
+.viper {
+  width: auto;
+  height: 13vw;
+  top: 20vh;
+  right: -460vw;
+  transform: translate(calc(var(--r_to_l4) * -1.4px));
+}
+.chimaera {
+  width: auto;
+  height: 20vw;
+  bottom: -670vh;
+  right: -400vw;
+  transform: translate(
+    calc(var(--r_to_l4) * -1.5px),
+    calc(var(--r_to_l4) * -1.5px)
+  );
+}
+.black-swallower {
+  width: auto;
+  height: 10vw;
+  top: 20vh;
+  right: -40vw;
+  transform: translate(calc(var(--r_to_l4) * -0.5px));
+}
+.narwhale {
+  width: auto;
+  height: 15vw;
+  top: 50vh;
+  left: -260vw;
+  transform: translate(calc(var(--r_to_l4) * 1.5px));
+}
 /*Item carcass*/
-#carcass{
+#carcass {
   position: absolute;
   z-index: 0;
 }
-#carcass:hover{
+#carcass:hover {
   cursor: pointer;
   transform: scale(1.1);
   transition: 0.5s;
   z-index: 0;
 }
-.museo{
+.museo {
   width: auto;
   max-height: 15vw;
   min-height: 19vh;
   bottom: 6vh;
   right: 2vw;
 }
-.cambay{
+.cambay {
   width: auto;
   max-height: 15vw;
   min-height: 19vh;
   bottom: 6vh;
   left: 2vw;
 }
-.unknow{
+.unknow {
   width: auto;
   max-height: 15vw;
   min-height: 19vh;
@@ -442,18 +527,25 @@ p {
   top: 10vh;
   transform: translate(calc(calc(var(--coral_l_epip) * -1) * 2px));
 }
-.indonesia{
+.indonesia {
   width: auto;
   max-height: 20vw;
   min-height: 19vh;
   left: -5vh;
   bottom: 5vh;
   transform: translate(calc(calc(var(--r_to_l2) * -0.1) * 2px));
-
+}
+.titanic {
+  width: auto;
+  max-height: 20vw;
+  min-height: 19vh;
+  left: -95vh;
+  bottom: 5vh;
+  transform: translate(calc(calc(var(--r_to_l4) * 0.1) * 1.3px));
 }
 
 /*Old code*/
-#rightcoral{
+#rightcoral {
   position: fixed;
   width: 30%;
   right: -3vw;
@@ -506,7 +598,7 @@ p {
   transition: 2s;
 }
 
-.btn{
+.btn {
   background-color: #fff;
   height: 40px;
   width: 100px;
@@ -519,8 +611,10 @@ p {
   color: inherit;
 }
 
-.btn.fp{
-  bottom: 0; position: absolute; margin-bottom: 100px;
+.btn.fp {
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 100px;
 }
 
 .popupp {
@@ -583,9 +677,9 @@ textarea::-webkit-scrollbar {
   --sizeRs: 0px;
   --sizeTi: 0px;
   --sizeTo: 0px;
-  --sizeMe:0px;
-  --sizeBa:0px;
-  --sizeAb:0px;
+  --sizeMe: 0px;
+  --sizeBa: 0px;
+  --sizeAb: 0px;
 }
 #mybtn2 {
   width: 8rem;

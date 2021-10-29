@@ -7,6 +7,7 @@ function onscrollFunction(){
     document.body.style.setProperty("--r_to_l", newY * 0.3);
     document.body.style.setProperty("--r_to_l2", (newY * 2) - 200);
     document.body.style.setProperty("--r_to_l3", (newY * 2) - 1000);
+    document.body.style.setProperty("--r_to_l4", (newY * 2) - 2000);
     document.body.style.setProperty("--blur", newY);
     document.body.style.setProperty("--blur2", newY-200);
     document.body.style.setProperty("--blur3", newY-1000);
@@ -27,7 +28,7 @@ function onscrollFunction(){
         canvas.dataset.scene = 'bath';
         if(check_bath == true){
             document.querySelector("#header-panel").innerText = 'Bathypelagic';
-            document.querySelector("#para-panel").innerText = 'ยินดีที่ได้รู้จัก';
+            document.querySelector("#para-panel").innerText = 'เริ่มต้นที่ด้านล่างของ mesopelagic และทอดยาวไปถึง 4,000 ม. โซนนี้มีขนาดใหญ่กว่า Mesopelagic มากและมีขนาดใหญ่กว่า Epipelagic ถึง 15 เท่า เป็นระบบนิเวศที่ใหญ่ที่สุดในโลก โซนนี้จะขาดแสงแดดอย่างสมบูรณ์ สิ่งมีชีวิตในท้องทะเลจะอาศัยอยู่ในความมืดสนิทตลอด 24 ชั่วโมงต่อวัน แต่ก็ยังแสงที่เกิดจากตัวสิ่งมีชีวิตเอง สิ่งนี้เรียกว่าการเรืองแสงทางชีวภาพเพื่อดึงดูดเหยื่อหรือหาคู่ครอง และสัตว์ในโซนนี้บางชนิดก็สูญเสียความสามารถในการมองเห็น';
             document.querySelector("#name-inner").innerText = 'Bathypelagic';
             check_bath = false;
             open_panel();
@@ -37,7 +38,7 @@ function onscrollFunction(){
         canvas.dataset.scene = 'aby';
         if(check_aby == true){
             document.querySelector("#header-panel").innerText = 'Abyssopelagic';
-            document.querySelector("#para-panel").innerText = 'ยินดีที่ได้รู้จัก';
+            document.querySelector("#para-panel").innerText = 'เป็นโซนก้นบึ้ง ลึกตั้งแต่ 4,000 เมตร ไปถึงก้นทะเล โซนนี้มีลักษณะเป็นญาติขาดชีวิต มีความมืดที่สุดของมหาสมุทรปกคลุมไปด้วยความมืดแบบนี้ไปตลอด และมีอุณหภูมิน้ำที่เย็นใกล้จุดเยือกแข็ง มันคือขุมนรกจริงๆ แต่ก็ยังมีสิ่งมีชีวิตที่มีวิวัฒนาการเพื่ออาศัยอยู่ในสภาพแวดล้อมนี้';
             document.querySelector("#name-inner").innerText = 'Abyssopelagic';
             check_aby = false;
             open_panel();
@@ -150,6 +151,26 @@ function fish_info(fish){
         document.querySelector("#fish_header").innerText = "ปลาฉลามกรีนแลนด์";
         document.querySelector("#fish_para").innerText = "ปลาฉลามกรีนแลนด์ พวกมันคือปลาฉลามที่กินเนื้อเป็นอาหาร อาศัยอยู่ในซีกโลกตอนเหนือสุด และขยายพันธุ์อยู่ในแถบน้ำที่หนาวเย็นถึง -6 องศาเซลเซียสเลยทีเดียว";
     }
+    else if(fish == 8){
+        document.querySelector("#fish_header").innerText = "ปลาแลนเซต";
+        document.querySelector("#fish_para").innerText = "ปลาแลนเซต เชื่อกันว่าเป็นปลาที่มีอายุรุ่นราวคราวเดียวกันกับไดโนเสาร์ มีครีบหลังขนาดใหญ่และเขี้ยวที่แหลมคม สามารถโตเต็มที่ได้ขึ้นถึง 2 เมตร น้อยมากที่จะมีใครรู้เกี่ยวกับวงจรชีวิตของพวกมันแม้ว่าพวกมันจะกระจายกันอย่างแพร่หลายในมหาสมุทรทั่วโลก ยกเว้นทะเลขั้วโลก อาศัยทะเลลึกถึง 1,000 เมตร ในเขตร้อน หากินในตอนกลางคืนโดยกินปลา กุ้ง หมึกเป็นอาหาร";
+    }
+    else if(fish == 9){
+        document.querySelector("#fish_header").innerText = "ปลาไวเปอร์";
+        document.querySelector("#fish_para").innerText = "มีลำตัวยาวส่วนมากสีของมันจะดำสนิทมันมีฟันเหมือนเข็มยาวและคมมากมีขากรรไกรเหมือนบานพับ เป็นนักล่าขนาดเล็กเนื่องจากมันมีขนาดยาวประมาณ 30-60 เซนติเมตร สามารถพบได้ในบริเวณน้ำที่ลึก 1,000 ถึง 4,000 เมตรโดยจะมีอุณหภูมิเฉลี่ยอยู่ที่ 4 องศาเซลเซียส มีอายุโดยเฉลี่ย 15-30 ปีในตอนกลางวันพวกมันจะอยู่บริเวณน้ำลึกในเวลากลางคืนส่วนใหญ่อยู่ในเขตน่านน้ำเขตร้อน";
+    }
+    else if(fish == 10){
+        document.querySelector("#fish_header").innerText = "ปลาคิเมียรา";
+        document.querySelector("#fish_para").innerText = " เป็นปลากระดูกอ่อน ในปัจจุบันนี้สามารถพบได้ตามทะเลลึก ปลาคิเมียราอาศัยอยู่ในทะเลลึกโดยอยู่ที่ระดับความลึกประมาณ 2,600 เมตร มีลำตัวยาวและมีหัวขนาดใหญ่และมีช่องปิดเหงือกช่องเดียวเมื่อโตเต็มวัยอาจมีความยาวถึง 150 ซ.ม. พวกมันเป็นปลากระดูกอ่อนมีผิวหนังที่เรียบเนียนมีสีน้ำตาลถึงเทาและมีครีบหลังเป็นกระดูกอ่อน ถึงจะมีลักษณะคล้ายปลาฉลามแต่มันมีสิ่งทีแตกต่างและแปลงออกไปคือปลาคิเมียราเพศผู้นั้นจะมีอวัยวะสืบพันธุ์ที่สามารถยืดหดได้อยู่บนหน้าผาก และมีครีบเอว";
+    }
+    else if(fish == 11){
+        document.querySelector("#fish_header").innerText = "ปลาแบล็คสวอลโล";
+        document.querySelector("#fish_para").innerText = "เป็นปลาทะเลลึกที่มีความสามารถกลืนปลาที่มีขนาดใหญ่กว่าตัวเองได้ อาศัยอยู่ในเขตทะเลน้ำร้อน และ เขตหุบเขาใต้ทะเลลึกภูเขาใต้ทะเลที่มีความลึก 700-2,745 เมตร มีความยาวสูงสุด 25 ซม. ไม่มีเกล็ด ลำตัวมีสีน้ำตาล - ดำสม่ำเสมอ ศีรษะยาวมีปากแหลม มีปากที่ใหญ่ ขากรรไกรล่างยื่นออกมาทางด้านบน กระดูกสันหลังมีขนาดเล็ก";
+    }
+    else if(fish == 12){
+        document.querySelector("#fish_header").innerText = "นาร์วาฬ";
+        document.querySelector("#fish_para").innerText = "เป็นวาฬมีฟันขนาดกลาง ซึ่งใช้ชีวิตตลอดทั้งปีที่บริเวณอาร์กติก นาร์วาลเพศผู้มีลักษณะที่โดดเด่นคือ มีงาที่ยาว ตรง เป็นเกลียวที่ยื่นมาจากกรามบนด้านซ้ายของพวกมัน แท้ที่จริงแล้วคือ ฟันเพียงซี่เดียวของพวกมัน อาจยาวได้ถึง 3 เมตร นาร์วาลส่วนใหญ่พบในบริเวณอาร์กติกของแคนาดาและเขตทะเลของกรีนแลนด์ นาร์วาลเป็นนักล่าที่มีเอกลักษณ์เฉพาะตัวในเขตอาร์กติก มันกินเหยื่อบริเวณพื้นใต้น้ำเป็นอาหาร พบได้ในระดับความลึกถึง 1,500 เมตร";
+    }
 
 }
 
@@ -172,6 +193,11 @@ function carcass_info(carcass){
     else if(carcass == 4){
         document.querySelector("#header-panel").innerText = "เรือดำน้ำ KRI Nanggala 402";
         document.querySelector("#para-panel").innerText = "เรือดำน้ำที่สูญหายบริเวณนอกชายฝั่งเกาะบาหลีพร้อมลูกเรือ 53 คน ระหว่างการฝึกซ้อมทางทหาร และสาเหตุการสูญหายยังเป็นปริศนาต่อไป";
+        open_panel();
+    }
+    else if(carcass == 5){
+        document.querySelector("#header-panel").innerText = "เรือไททานิค";
+        document.querySelector("#para-panel").innerText = "เรือโดยสารซึ่งจมลงสู่ก้นมหาสมุทรแอตแลนติกเมื่อวันที่ 15 เมษายน ค.ศ. 1912 หลังชนภูเขาน้ำแข็งระหว่างการเดินทางเที่ยวแรกจากเซาท์แทมป์ตัน สหราชอาณาจักร ไปนครนิวยอร์ก สหรัฐอเมริกา";
         open_panel();
     }
 }
