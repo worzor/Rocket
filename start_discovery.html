@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Roboto+Slab:wght@400;500&display=swap"
+        rel="stylesheet">
     <title>Star Discovery</title>
 </head>
+
 <body onscroll="onscrollFunction()" id="second-page">
     <div id="flashlightTurn" class="flashlight"></div>
     <div class="warp blen-bg">
@@ -26,14 +30,23 @@
             <!-- ข้อมูลปลา -->
             <div id="fishInfo" class="message-panel-fish">
                 <h1 id="fish_header">ข้อมูลปลา</h1>
-                <p id="fish_para">กรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูล</p>
+                <p id="fish_para">
+                    กรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูลกรุณาเลือกปลาที่ต้องการข้อมูล
+                </p>
             </div>
-            <a id="flashlightBtn" onclick="flashlight()" class="flashlight_btn"><h1>Spotlight</h1></a>
+            <a id="flashlightBtn" onclick="flashlight()" class="flashlight_btn">
+                <h1>Spotlight</h1>
+            </a>
             <!-- ข้อมูลชั้น เเละ ข้อมูลโบราณสถาน -->
             <div id="textArea" class="message-panel active">
                 <div class="warp-txt" style="padding: 0 3vh;">
                     <h1 id="header-panel">Epipelagic</h1>
-                    <p id="para-panel">ยินดีต้อนรับเข้าสู่ยินดีต้อนรับเข้าสู่ยินดีต้อนรับเข้าสู่ยินดีต้อนรับเข้าสู่ยินดีต้อนรับเข้าสู่ยินดีต้อนรับเข้าสู่ยินดีต้อนรับยินดีต้อนรับเข้าสู่ยินดีต้อนรับเข้าสู่ยินดีต้อนรับเข้าสู่ยินดีต้อนรับเข้าสู่ยินดีต้อนรับเข้าสู่ยินดีต้อนรับเข้าสู่ยินดีต้อนรับยินดีต้อนรับเข้าสู่ยินดีต้อนรับเข้าสู่ยินดีต้อนรับเข้าสู่ยินดีต้อนรับเข้าสู่ยินดีต้อนรับเข้าสู่ยินดีต้อนรับเข้าสู่ยินดีต้อนรับ</p>
+                    <p id="para-panel">Epipelagic
+                        ชั้นที่พวกเรารับรู้และสามารถเรียนรู้ถึงสิ่งมีชีวิตต่างๆได้อย่างกว้างขวาง
+                        ชั้นแรกของมหาสมุทรอันกว้างใหญ่ เป็นที่อยู่อาศัยของปลาหลายชนิดที่พวกเรารู้จัก
+                        และมีแสงสว่างมากพอที่จะมองเห็นได้ด้วยตาเปล่า
+                        อยากรู้แล้วใช่ไหมล่ะว่ามีปลาอะไรที่น่าสนใจในชั้นนี้บ้าง ถ้าพร้อมแล้วก็ไปสำรวจกัยเลย!!!
+                    </p>
                     <a class="mes-btn" onclick="close_panel()">รับทราบ</a>
                 </div>
             </div>
@@ -42,33 +55,34 @@
                 <img class="border-coral-l" src="./images/border-coral/coral-set1-left.png">
                 <img class="border-coral-r" src="./images/border-coral/coral-set1-right.png">
                 <img class="border-coral-bl" src="./images/border-coral/coral-set3-bottom-left.png">
-                <img id="carcass" class="unknow" src="./images/carcass/unknownshipwrech.png">
+                <img id="carcass" class="unknow" onclick="carcass_info(3)" src="./images/carcass/unknownshipwrech.png">
                 <img class="cover-page one bottom" src="./images/birt garbage.png">
                 <img id="carcass" class="museo" onclick="carcass_info(1)" src="./images/carcass/museo.png">
-                <img id="carcass" class="cambay" onclick="" src="./images/carcass/cambay.png">
+                <img id="carcass" class="cambay" onclick="carcass_info(2)" src="./images/carcass/cambay.png">
                 <img id="fish" class="clownfish" onclick="fish_info(1)" src="./images/epip/Clownfish.png">
-                <img id="fish" class="blacktip" src="./images/epip/Blacktip-reef-shark.png">
-                <img id="fish" class="tuna" src="./images/epip/Yellowfin-Tuna.png">
+                <img id="fish" class="blacktip" onclick="fish_info(2)" src="./images/epip/Blacktip-reef-shark.png">
+                <img id="fish" class="tuna" onclick="fish_info(3)" src="./images/epip/Yellowfin-Tuna.png">
             </div>
             <div id="mesopelagic">
                 <img class="cover-page two bottom" src="./images/birt garbage.png">
                 <img class="border-coral-tr" src="./images/border-coral/coral-set3-top-right.png">
                 <img class="border-coral-tl" src="./images/border-coral/coral-set3-top-left.png">
                 <img class="border-coral-l" src="./images/border-coral/coral-set1-left.png">
-                <img id="carcass" class="indonesia" src="./images/carcass/indonesia.png">
-                <img id="fish" class="oarfish" src="./images/meso/Oarfish.png">
-                <img id="fish" class="sunfish" src="./images/meso/Sunfish.png">
-                <img id="fish" class="whaleShark" src="./images/meso/whale shark.png">
-                <img id="fish" class="myctophids" src="./images/meso/myctophids.png">
+                <img id="carcass" class="indonesia" onclick="carcass_info(4)" src="./images/carcass/indonesia.png">
+                <img id="fish" class="oarfish" onclick="fish_info(4)" src="./images/meso/Oarfish.png">
+                <img id="fish" class="sunfish" onclick="fish_info(5)" src="./images/meso/Sunfish.png">
+                <img id="fish" class="whaleShark" onclick="fish_info(6)" src="./images/meso/whale shark.png">
+                <img id="fish" class="myctophids" onclick="fish_info(7)" src="./images/meso/myctophids.png">
             </div>
             <div id="bathypelagic">
                 <img class="border-coral-tl" src="./images/border-coral/coral-set3-top-left.png">
                 <img class="border-coral-br" src="./images/border-coral/coral-set3-bottom-right.png">
             </div>
             <div id="abyssopelagic">
-                
+
             </div>
         </div>
     </div>
 </body>
+
 </html>
