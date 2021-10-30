@@ -474,7 +474,7 @@ p {
   width: auto;
   height: 20vw;
   bottom: -670vh;
-  right: -400vw;
+  right: -350vw;
   transform: translate(
     calc(var(--r_to_l4) * -1.5px),
     calc(var(--r_to_l4) * -1.5px)
@@ -494,6 +494,36 @@ p {
   left: -260vw;
   transform: translate(calc(var(--r_to_l4) * 1.5px));
 }
+
+.granlator{
+  width: auto;
+  height: 15vw;
+  top: 55vh;
+  left: -630vw;
+  transform: translate(calc(var(--r_to_l5) * 1px));
+}
+.dumbo{
+  width: auto;
+  height: 10vw;
+  top: 65vh;
+  left: -740vw;
+  transform: translate(calc(var(--r_to_l5) * 1px));
+}
+.fangtooth{
+  width: auto;
+  height: 15vw;
+  top: 40vh;
+  left: -420vw;
+  transform: translate(calc(var(--r_to_l5) * 1px));
+}
+.anglerfish{
+  width: auto;
+  height: 15vw;
+  top: 40vh;
+  left: 400vw;
+  transform: translate(calc(var(--r_to_l5) * -1px));
+}
+
 /*Item carcass*/
 #carcass {
   position: absolute;
