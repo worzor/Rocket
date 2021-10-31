@@ -515,21 +515,21 @@ p {
   width: auto;
   height: 10vw;
   top: 39vh;
-  left: -400vw;
-  transform: translate(calc(var(--r_to_l5) * 2px));
+  left: -420vw;
+  transform: translate(calc(var(--r_to_l5) * 2.1px));
 }
 .fangtooth{
   width: auto;
   height: 15vw;
   top: 40vh;
-  left: -315vw;
+  left: -350vw;
   transform: translate(calc(var(--r_to_l5) * 1px));
 }
 .anglerfish{
   width: auto;
   height: 15vw;
   top: 40vh;
-  left: 347vw;
+  left: 385vw;
   transform: translate(calc(var(--r_to_l5) * -1.19px));
 }
 
