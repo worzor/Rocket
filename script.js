@@ -38,6 +38,7 @@ function onscrollFunction(){
     }if(newY >= 4000){
         canvas.dataset.scene = 'aby';
         if(check_aby == true){
+           
             document.querySelector("#header-panel").innerText = 'Abyssopelagic';
             document.querySelector("#para-panel").innerText = 'เป็นโซนก้นบึ้ง ลึกตั้งแต่ 4,000 เมตร ไปถึงก้นทะเล โซนนี้มีลักษณะเป็นญาติขาดชีวิต มีความมืดที่สุดของมหาสมุทรปกคลุมไปด้วยความมืดแบบนี้ไปตลอด และมีอุณหภูมิน้ำที่เย็นใกล้จุดเยือกแข็ง มันคือขุมนรกจริงๆ แต่ก็ยังมีสิ่งมีชีวิตที่มีวิวัฒนาการเพื่ออาศัยอยู่ในสภาพแวดล้อมนี้';
             document.querySelector("#name-inner").innerText = 'Abyssopelagic';

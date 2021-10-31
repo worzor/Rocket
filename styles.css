@@ -9,6 +9,7 @@
   --r_to_l2: 0;
   --r_to_l3: 0;
   --r_to_l4: 0;
+  --r_to_l5: 0;
   --fishY: 0;
   --cursorX: 50vw;
   --cursorY: 50vh;
@@ -205,6 +206,7 @@ body {
   background-color: #7a0000;
   text-align: center;
 }
+
 .bg-panel {
   width: 0;
   height: 0;
@@ -494,38 +496,35 @@ p {
   left: -260vw;
   transform: translate(calc(var(--r_to_l4) * 1.5px));
 }
-.glassink{
+.glassink {
   width: auto;
   height: 15vw;
-  bottom: -670vh;
-  right: -320vw;
-  transform: translate(
-    calc(var(--r_to_l4) * -1.6px),
-    calc(var(--r_to_l4) * -1.6px)
-  );
+  top: 50vh;
+  left: -10vw;
+  transform: translate(calc(var(--r_to_l4) * 1.4px));
 }
-.granlator{
+.granlator {
   width: auto;
   height: 15vw;
   top: 55vh;
   left: -630vw;
   transform: translate(calc(var(--r_to_l5) * 1px));
 }
-.dumbo{
+.dumbo {
   width: auto;
   height: 10vw;
   top: 39vh;
   left: -420vw;
   transform: translate(calc(var(--r_to_l5) * 2.1px));
 }
-.fangtooth{
+.fangtooth {
   width: auto;
   height: 15vw;
   top: 40vh;
   left: -350vw;
   transform: translate(calc(var(--r_to_l5) * 1px));
 }
-.anglerfish{
+.anglerfish {
   width: auto;
   height: 15vw;
   top: 40vh;
@@ -582,13 +581,13 @@ p {
   bottom: 5vh;
   transform: translate(calc(calc(var(--r_to_l4) * 0.1) * 1.3px));
 }
-.apollo{
+.apollo {
   width: auto;
   max-height: 20vw;
   min-height: 19vh;
-  left: -180vh;
-  bottom: 20vh;
-  transform: translate(calc(calc(var(--r_to_l5) * 0.1) * 1px));
+  left: -200vh;
+  bottom: 30vh;
+  transform: translate(calc(calc(var(--r_to_l5) * 0.1) * 1.3px));
 }
 /*Old code*/
 #rightcoral {
@@ -645,33 +644,43 @@ p {
 }
 
 .btn {
-  background-color: #fff;
   height: 40px;
   width: 100px;
   align-items: center;
   text-align: center;
   display: flex;
   justify-content: center;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px #1d1e22;
   color: inherit;
-}
 
+  padding: 10px;
+  border-style: solid;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.btn:hover {
+  background-color: #01203d;
+  color: #4287a7;
+  transition: 0.5s;
+}
 .btn.fp {
   bottom: 0;
   position: absolute;
   margin-bottom: 100px;
 }
-
 .popupp {
-  background-color: #fff;
+  box-shadow: inset 0em 0em 2em #012331;
+  color: #01203d;
+  background-color: #5994af;
+  border-radius: 30px;
   z-index: 10;
   position: absolute;
-  top: 12.5%;
-  left: 15.5%;
-  margin: 0 auto;
-  width: 69vw;
-  height: 75vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 80vw;
+  max-height: 75vh;
   visibility: hidden;
   display: flex;
   justify-content: center;
@@ -685,7 +694,10 @@ p {
     opacity: 100%;
   }
 }
-
+#textpopup {
+  margin-top: 10vh;
+  font-weight: 500;
+}
 .text_block {
   position: absolute;
   width: 500px;
