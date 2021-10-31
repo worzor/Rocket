@@ -494,7 +494,16 @@ p {
   left: -260vw;
   transform: translate(calc(var(--r_to_l4) * 1.5px));
 }
-
+.glassink{
+  width: auto;
+  height: 15vw;
+  bottom: -670vh;
+  right: -320vw;
+  transform: translate(
+    calc(var(--r_to_l4) * -1.6px),
+    calc(var(--r_to_l4) * -1.6px)
+  );
+}
 .granlator{
   width: auto;
   height: 15vw;
@@ -505,23 +514,23 @@ p {
 .dumbo{
   width: auto;
   height: 10vw;
-  top: 65vh;
-  left: -740vw;
-  transform: translate(calc(var(--r_to_l5) * 1px));
+  top: 39vh;
+  left: -400vw;
+  transform: translate(calc(var(--r_to_l5) * 2px));
 }
 .fangtooth{
   width: auto;
   height: 15vw;
   top: 40vh;
-  left: -420vw;
+  left: -315vw;
   transform: translate(calc(var(--r_to_l5) * 1px));
 }
 .anglerfish{
   width: auto;
   height: 15vw;
   top: 40vh;
-  left: 400vw;
-  transform: translate(calc(var(--r_to_l5) * -1px));
+  left: 347vw;
+  transform: translate(calc(var(--r_to_l5) * -1.19px));
 }
 
 /*Item carcass*/
@@ -573,7 +582,14 @@ p {
   bottom: 5vh;
   transform: translate(calc(calc(var(--r_to_l4) * 0.1) * 1.3px));
 }
-
+.apollo{
+  width: auto;
+  max-height: 20vw;
+  min-height: 19vh;
+  left: -180vh;
+  bottom: 20vh;
+  transform: translate(calc(calc(var(--r_to_l5) * 0.1) * 1px));
+}
 /*Old code*/
 #rightcoral {
   position: fixed;
