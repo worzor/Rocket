@@ -45,7 +45,7 @@ function onscrollFunction(){
             check_aby = false;
             open_panel();
         }
-    }if(newY >= 4500){
+    }/*if(newY >= 4500){
         canvas.dataset.scene = 'abypop';
         if(check_abypop == true){
             document.querySelector("#header-panel").innerText = 'ปลาไปไหนหมดน้าาาาาา????????';
@@ -54,7 +54,7 @@ function onscrollFunction(){
             check_abypop = false;
             open_panel();
         }
-    }
+    }*/
 }
 function onmove() {
     document.addEventListener("mousemove", parallax);
