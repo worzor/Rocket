@@ -54,6 +54,8 @@ function onscrollFunction(){
             check_abypop = false;
             open_panel();
         }
+    }if(newY >= 9500){
+        end_desShow();
     }
 }
 function onmove() {
@@ -252,5 +254,17 @@ function carcass_info(carcass){
         document.querySelector("#header-panel").innerText = "ซากเครื่องยนต์อะพอลโล 11";
         document.querySelector("#para-panel").innerText = "หนึ่งในชิ้นส่วนของเครื่องยนต์ที่ใช้ขับเคลื่อนกระสวยอวกาศอะพอลโล 11 จมอยู่ในความลึกที่ 4300 เมตร ใต้ท้องมหาสมุทรแอตแลนติก";
         open_panel();
+    }
+}
+
+function end_desShow(){
+    if(newY >= 9500 && newY < 9700){
+        document.querySelector("#end").innerText = "เส้นทางการเดินทางสู่ชาเลนเจอร์ดีปน้อยกว่าการเดินทางไปดวงจันทร์";
+    }else if(newY >= 9700 && newY < 9900){
+        document.querySelector("#end").innerText = "แต่มนุษย์นั้นเดินทางสำรวจจุดที่ลึกที่สุดของทะเลน้อยกว่าการเดินทางไปเหยียบดวงจันทร์เสียอีก";
+    }else if(newY >= 9900 && newY < 11000){
+        document.querySelector("#end").innerText = "ใครจะไปรู้ว่า สักวันหนึ่ง ใต้ท้องทะเลลึกเหล่านั้นอาจจะมีทรัพยากรใหม่ๆซ่อนตัวอยู่ แล้วรอให้ใครบางคนเดินทางไปค้นพบก็เป็นได้";
+    }else{
+        document.querySelector("#end").innerText = "";
     }
 }

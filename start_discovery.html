@@ -13,7 +13,7 @@
     <title>Star Discovery</title>
 </head>
 
-<body onscroll="onscrollFunction()" id="second-page" style="overflow-y: hidden;">
+<body onscroll="onscrollFunction() , end_desShow()" id="second-page" style="overflow-y: hidden;">
     <div id="flashlightTurn" class="flashlight"></div>
     <div class="warp blen-bg">
         <div class="screen-play" id="canvas" data-scene="epip">
@@ -94,6 +94,7 @@
                 <img id="fish-hidden" class="dumbo hidden" onclick="fish_info(15)" src="./images/abyss/Dumbo octopuses.png">
                 <img id="fish-hidden" class="fangtooth hidden" onclick="fish_info(16)" src="./images/abyss/fangtooth.png">
                 <img id="fish-hidden" class="anglerfish hidden" onclick="fish_info(17)" src="./images/abyss/humpback anglerfish.png">
+                <div class="end-des"><p id="end"></p></div>
             </div>
         </div>
     </div>
