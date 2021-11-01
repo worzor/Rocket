@@ -185,6 +185,26 @@ body {
   color: #007a75;
   transition: 0.5s;
 }
+.exit-btn{
+  box-shadow: inset 0em 0em 3em #001413;
+  color: #ec3b3b;
+  background-color: #7a0000;
+  text-align: center;
+  cursor: pointer;
+  border-style: solid;
+  position: absolute;
+  width: auto;
+  height: auto;
+  right: 10vh;
+  bottom: 4vh;
+  border-radius: 10px;
+  z-index: 99;
+  padding: 10px;
+  font-weight: 400 !important;
+}
+.exit-btn h2{
+  margin: 0;
+}
 .flashlight_btn h1 {
   margin: 0;
 }
@@ -603,6 +623,11 @@ p {
   left: -95vh;
   bottom: 5vh;
   transform: translate(calc(calc(var(--r_to_l4) * 0.1) * 1.3px));
+  position: absolute;
+  z-index: 0;
+}
+.titanic:hover, .apollo:hover{
+  cursor: pointer;
 }
 .apollo {
   width: auto;
@@ -614,9 +639,7 @@ p {
   position: absolute;
   z-index: 0;
 }
-.apollo:hover {
-  cursor: pointer;
-}
+
 /*Old code*/
 #rightcoral {
   position: fixed;
@@ -679,7 +702,6 @@ p {
   display: flex;
   justify-content: center;
   color: inherit;
-
   padding: 10px;
   border-style: solid;
   border-radius: 10px;
@@ -697,8 +719,8 @@ p {
 }
 .popupp {
   color: #d7e5f3;
-  background-image: url(/images/popupfirst_page.png);
-  background-size: cover;
+  background-image: url(./images/popupfirst_page.png);
+  background-size: 100% 100%;
   z-index: 10;
   position: absolute;
   left: 0;
