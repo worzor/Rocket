@@ -113,7 +113,7 @@ body {
 #canvas[data-scene="abypop"] #bathypelagic,
 #canvas[data-scene="abypop"] #abyssopelagic,
 #canvas[data-scene="abypop"] #abyssopelagic {
-  transform: translate(0, -400vh);
+  transform: translate(0, -300vh);
   transition: 1s;
 }
 .message-panel {
