@@ -633,9 +633,9 @@ p {
   width: auto;
   max-height: 20vw;
   min-height: 19vh;
-  left: -200vh;
+  left: -160vh;
   bottom: 30vh;
-  transform: translate(calc(calc(var(--r_to_l5) * 0.1) * 1.3px));
+  transform: translate(calc(calc(var(--r_to_l5) * .135) * 1.7px));
   position: absolute;
   z-index: 0;
 }
