@@ -258,13 +258,29 @@ function carcass_info(carcass){
 }
 
 function end_desShow(){
+    if(newY < 9500){
+        document.querySelector("#fishInfo").classList.add("active");
+        document.querySelector("#challengerD").classList.remove("active");
+    }else if(newY >= 9500){
+        document.querySelector("#fishInfo").classList.remove("active");
+        document.querySelector("#challengerD").classList.add("active");
+    }
     if(newY >= 9500 && newY < 9700){
         document.querySelector("#end").innerText = "เส้นทางการเดินทางสู่ชาเลนเจอร์ดีปน้อยกว่าการเดินทางไปดวงจันทร์";
     }else if(newY >= 9700 && newY < 9900){
         document.querySelector("#end").innerText = "แต่มนุษย์นั้นเดินทางสำรวจจุดที่ลึกที่สุดของทะเลน้อยกว่าการเดินทางไปเหยียบดวงจันทร์เสียอีก";
-    }else if(newY >= 9900 && newY < 11000){
+    }else if(newY >= 9900 && newY < 10100){
         document.querySelector("#end").innerText = "ใครจะไปรู้ว่า สักวันหนึ่ง ใต้ท้องทะเลลึกเหล่านั้นอาจจะมีทรัพยากรใหม่ๆซ่อนตัวอยู่ แล้วรอให้ใครบางคนเดินทางไปค้นพบก็เป็นได้";
-    }else{
+    }else if(newY >= 10100 && newY < 10300){
+        document.querySelector("#end").innerText = "ทะเลนอกจากจะเป็นแหล่งอาศัยของสัตว์ที่มีความหลากหลายมากที่สุดบนโลกแล้ว ยังได้ชื่อว่าเป็นต้นกำเนิดของพัฒนาการทุกชีวิตบนโลก เชื่อว่านั่นทำให้ทะเลลึกมีคุณค่ามหาศาลต่อมนุษย์และกำลังตกอยู่ในภาวะเสี่ยงในปัจจุบัน";
+    }else if(newY >= 10300 && newY < 10500){
+        document.querySelector("#end").innerText = "ทะเลนอกจากจะเป็นแหล่งอาศัยของสัตว์ที่มีความหลากหลายมากที่สุดบนโลกแล้ว ยังได้ชื่อว่าเป็นต้นกำเนิดของพัฒนาการทุกชีวิตบนโลก เชื่อว่านั่นทำให้ทะเลลึกมีคุณค่ามหาศาลต่อมนุษย์และกำลังตกอยู่ในภาวะเสี่ยงในปัจจุบัน";
+    }else if(newY >= 10500 && newY < 10700){
+        document.querySelector("#end").innerText = "การคงสภาพความหลากหลายทางชีวภาพใต้ทะเลลึกมีความสำคัญมากพอๆกับการดึงเอาทรัพยากรใต้ทะเลไปใช้ เขาและทีมผู้เชี่ยวชาญทางทะเลวิทยาที่เข้าร่วมการศึกษาสำรวจใต้ทะเลลึกครั้งยาวนานนี้ หวังว่าผลการสำรวจที่ออกมาจะช่วยให้รัฐบาลผู้ออกนโยบายการใช้ทรัพยากรธรรมชาติใต้ทะเล เข้าใจความสำคัญในการพิทักษ์ระบบนิเวศใต้ทะเลลึกไปพร้อมๆกับการใช้ทรัพยากรธรรมชาติ";
+    }else if(newY >= 10700){
+        document.querySelector("#end").innerText = "สุดท้ายนี้.....";
+    }
+    else{
         document.querySelector("#end").innerText = "";
     }
 }

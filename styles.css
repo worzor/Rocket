@@ -124,7 +124,7 @@ body {
   top: 0;
   visibility: hidden;
 }
-.message-panel-fish {
+.message-panel-fish.active{
   overflow: auto;
   position: absolute;
   border-style: solid;
@@ -288,7 +288,7 @@ body {
   height: 120vh;
 }
 .warp {
-  height: calc(2500vh * 10);
+  height: calc(2250vh * 10);
   background: linear-gradient(
     0deg,
     rgba(0, 9, 16, 1) 0%,
@@ -640,6 +640,7 @@ p {
   position: absolute;
   z-index: 0;
 }
+
 /*Description ตอนจบ*/
 .end-des {
   width: 100%;
@@ -651,6 +652,17 @@ p {
   position: fixed;
   z-index: -1;
   color: #fff;
+}
+.challengerDeep{
+  visibility: hidden;
+}
+.challengerDeep.active{
+  visibility: visible;
+  position: fixed;
+  top: 19vh;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 /*Old code*/
