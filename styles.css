@@ -79,39 +79,43 @@ body {
 #canvas[data-scene="epip"] #epipelagic,
 #canvas[data-scene="epip"] #mesopelagic,
 #canvas[data-scene="epip"] #abyssopelagic,
-#canvas[data-scene="epip"] #bathypelagic {
+#canvas[data-scene="epip"] #bathypelagic,
+#canvas[data-scene="epip"] #abyssopelagic {
   transition: 1s;
 }
 
 #canvas[data-scene="meso"] #epipelagic,
 #canvas[data-scene="meso"] #mesopelagic,
 #canvas[data-scene="meso"] #abyssopelagic,
-#canvas[data-scene="meso"] #bathypelagic {
+#canvas[data-scene="meso"] #bathypelagic,
+#canvas[data-scene="meso"] #abyssopelagic {
   transform: translate(0, -100vh);
   transition: 1s;
 }
 #canvas[data-scene="bath"] #epipelagic,
 #canvas[data-scene="bath"] #mesopelagic,
 #canvas[data-scene="bath"] #abyssopelagic,
-#canvas[data-scene="bath"] #bathypelagic {
+#canvas[data-scene="bath"] #bathypelagic,
+#canvas[data-scene="bath"] #abyssopelagic {
   transform: translate(0, -200vh);
   transition: 1s;
 }
 #canvas[data-scene="aby"] #epipelagic,
 #canvas[data-scene="aby"] #mesopelagic,
 #canvas[data-scene="aby"] #bathypelagic,
+#canvas[data-scene="aby"] #abyssopelagic,
 #canvas[data-scene="aby"] #abyssopelagic {
   transform: translate(0, -300vh);
   transition: 1s;
 }
-/*#canvas[data-scene="abypop"] #epipelagic,
+#canvas[data-scene="abypop"] #epipelagic,
 #canvas[data-scene="abypop"] #mesopelagic,
 #canvas[data-scene="abypop"] #bathypelagic,
 #canvas[data-scene="abypop"] #abyssopelagic,
 #canvas[data-scene="abypop"] #abyssopelagic {
   transform: translate(0, -400vh);
   transition: 1s;
-}*/
+}
 .message-panel {
   position: absolute;
   width: 0;
