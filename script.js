@@ -20,7 +20,7 @@ function onscrollFunction(){
         canvas.dataset.scene = 'meso';
         if(chack_meso == true){
             document.querySelector("#header-panel").innerText = 'Mesopelagic';
-            document.querySelector("#para-panel").innerText = 'มาถึงชั้นที่ลึกลงมาอีกระดับแล้วนะ ชั้นนี้เปรียบได้เป็น twilight zone ที่มีแสงสว่างเพียงแค่ 1% เท่านั้น!!';
+            document.querySelector("#para-panel").innerText = 'Mesopelagic มีความลึกประมาณ 1,000 เมตร เป็นบริเวณที่มีแสงเข้ม เปรียบได้เป็น twilight zone ที่มีแสงสว่างเพียงแค่ 1% เท่านั้น!! ที่สำคัญในชั้นนี้ประกอบด้วยสัตว์ต่างๆหลากหลายสายพันธุ์ ทั้งสัตว์มีกระดูกสันหลังและสัตว์ไม่มีกระดูกสันหลังอีกด้วย';
             document.querySelector("#name-inner").innerText = 'Mesopelagic';
             chack_meso = false;
             open_panel();
@@ -29,7 +29,7 @@ function onscrollFunction(){
         canvas.dataset.scene = 'bath';
         if(check_bath == true){
             document.querySelector("#header-panel").innerText = 'Bathypelagic';
-            document.querySelector("#para-panel").innerText = 'เริ่มต้นที่ด้านล่างของ mesopelagic และทอดยาวไปถึง 4,000 ม. โซนนี้มีขนาดใหญ่กว่า Mesopelagic มากและมีขนาดใหญ่กว่า Epipelagic ถึง 15 เท่า เป็นระบบนิเวศที่ใหญ่ที่สุดในโลก โซนนี้จะขาดแสงแดดอย่างสมบูรณ์ สิ่งมีชีวิตในท้องทะเลจะอาศัยอยู่ในความมืดสนิทตลอด 24 ชั่วโมงต่อวัน แต่ก็ยังแสงที่เกิดจากตัวสิ่งมีชีวิตเอง สิ่งนี้เรียกว่าการเรืองแสงทางชีวภาพเพื่อดึงดูดเหยื่อหรือหาคู่ครอง และสัตว์ในโซนนี้บางชนิดก็สูญเสียความสามารถในการมองเห็น';
+            document.querySelector("#para-panel").innerText = 'Bathypelagic มีความลึกถึง 4,000 เมตร เทียบเท่ากับระดับของเมฆชั้นกลางเลยทีเดียว โดยระดับชั้นทะเลนี้ได้ชื่อว่าเป็นระบบนิเวศที่ใหญ่ที่สุดในโลก เพราะระดับชั้นนี้มีขนาดใหญ่กว่าชั้นต่างๆอยู่มาก แต่โซนนี้มีแสงสลัว จึงทำให้สิ่งมีชีวิตต่างๆดำรงชีวิตอยู่ในความมืดตลอดเวลา';
             document.querySelector("#name-inner").innerText = 'Bathypelagic';
             check_bath = false;
             open_panel();
@@ -40,7 +40,7 @@ function onscrollFunction(){
         if(check_aby == true){
            
             document.querySelector("#header-panel").innerText = 'Abyssopelagic';
-            document.querySelector("#para-panel").innerText = 'เป็นโซนก้นบึ้ง ลึกตั้งแต่ 4,000 เมตร ไปถึงก้นทะเล โซนนี้มีลักษณะเป็นญาติขาดชีวิต มีความมืดที่สุดของมหาสมุทรปกคลุมไปด้วยความมืดแบบนี้ไปตลอด และมีอุณหภูมิน้ำที่เย็นใกล้จุดเยือกแข็ง มันคือขุมนรกจริงๆ แต่ก็ยังมีสิ่งมีชีวิตที่มีวิวัฒนาการเพื่ออาศัยอยู่ในสภาพแวดล้อมนี้';
+            document.querySelector("#para-panel").innerText = 'Abyssopelagic เป็นระดับชั้นที่อยู่ก้นบึ้งของทะเล ในระดับชั้นนี้แสงไม่สามารถส่องถึงได้ เลยมีความมืดที่สุด และมีอุณหภูมิของน้ำที่เย็นที่สุดเช่นเดียวกัน ระดับชั้นนี้ได้ฉายาว่าขุมนรก แต่อย่างไรก็ตาม ในระดับชั้นนี้ยังมีสิ่งมีชีวิตที่วิวัฒนาการเพื่อให้ตัวมันเองสามารถอาศัยอยู่ในสภาพแวดล้อมนี้ได้';
             document.querySelector("#name-inner").innerText = 'Abyssopelagic';
             check_aby = false;
             open_panel();
