@@ -410,7 +410,7 @@ p {
   cursor: pointer;
   transition: 0.5s;
 }
-#fish-hidden{
+#fish-hidden {
   position: absolute;
   z-index: 80;
   transition: 0.1s;
@@ -552,7 +552,7 @@ p {
   transform: translate(calc(var(--r_to_l5) * -1.19px));
 }
 
-.hidden{
+.hidden {
   visibility: hidden;
 }
 /*Item carcass*/
@@ -614,7 +614,7 @@ p {
   position: absolute;
   z-index: 0;
 }
-.apollo:hover{
+.apollo:hover {
   cursor: pointer;
 }
 /*Old code*/
@@ -696,10 +696,9 @@ p {
   margin-bottom: 100px;
 }
 .popupp {
-  box-shadow: inset 0em 0em 2em #012331;
-  color: #01203d;
-  background-color: #5994af;
-  border-radius: 30px;
+  color: #d7e5f3;
+  background-image: url(/images/popupfirst_page.png);
+  background-size: cover;
   z-index: 10;
   position: absolute;
   left: 0;
@@ -707,12 +706,13 @@ p {
   top: 0;
   bottom: 0;
   margin: auto;
-  max-width: 80vw;
+  max-width: 81vw;
   max-height: 75vh;
   visibility: hidden;
   display: flex;
   justify-content: center;
   text-align: center;
+  text-shadow: 0 2px 5px #142432;
 }
 @keyframes fadepopup1 {
   0% {
@@ -722,10 +722,34 @@ p {
     opacity: 100%;
   }
 }
-#textpopup {
-  margin-top: 10vh;
-  font-weight: 500;
+.notice {
+  width: 13ch;
+  animation: typing 3s steps(14), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+  text-align: center;
+  display: inline-block;
+  justify-content: center;
 }
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+#textpopup {
+  margin-top: 4vh;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: 2px;
+}
+
 .text_block {
   position: absolute;
   width: 500px;

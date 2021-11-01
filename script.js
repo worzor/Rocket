@@ -45,11 +45,11 @@ function onscrollFunction(){
             check_aby = false;
             open_panel();
         }
-    }if(newY >= 4500){
+    }if(newY >= 4200){
         canvas.dataset.scene = 'abypop';
         if(check_abypop == true){
-            document.querySelector("#header-panel").innerText = 'ปลาไปไหนหมดน้าาาาาา????????';
-            document.querySelector("#para-panel").innerText = 'มองไม่เห็นอะไรเลยใช่มั๊ยยยย? กดSpotlightดูสิๆๆๆๆๆๆๆๆๆ แล้วลองหาดูน้าาาา';
+            document.querySelector("#header-panel").innerText = 'มองไม่เห็นกันใช่ไหม';
+            document.querySelector("#para-panel").innerText = 'เราเดินทางกันมาไกลกว่า 4,000 เมตรแล้วนะ เราเดินทางมาถึงจุดที่มืดที่สุดแล้ว มองไม่เห็นอะไรเลยใช่ไหม ลองใช้ Spotlight ดูสิ';
             document.querySelector("#name-inner").innerText = 'Abyssopelagic';
             check_abypop = false;
             open_panel();
