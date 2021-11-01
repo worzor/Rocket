@@ -107,6 +107,7 @@ function test(){
 
 function open_panel(){
     var All_text = document.querySelectorAll("#textArea");
+    document.body.style.overflowY = "hidden";
         for(el in All_text){
             All_text[el].classList.add("active");
         }
@@ -114,6 +115,7 @@ function open_panel(){
 
 function close_panel(){
     var All_text = document.querySelectorAll("#textArea");
+    document.body.style.overflowY = "auto";
     for(el in All_text){
         All_text[el].classList.remove("active");
     }
@@ -124,20 +126,28 @@ function flashlight(){
     if(check_FL == 0){
         document.getElementById("flashlightTurn").classList.add("active");
         document.getElementById("flashlightBtn").classList.add("active");
-        document.getElementById("fish-hidden").style.visibility = "visible";
-        document.getElementById("fish-hidden").style.visibility = "visible";
-        document.getElementById("fish-hidden").style.visibility = "visible";
-        document.getElementById("fish-hidden").style.visibility = "visible";
         check_FL = 1;
+        show_fish(1);
     } else if(check_FL == 1){
         document.getElementById("flashlightTurn").classList.remove("active");
         document.getElementById("flashlightBtn").classList.remove("active");
-        document.getElementById("fish-hidden").style.visibility = "visible";
-        document.getElementById("fish-hidden").style.visibility = "visible";
-        document.getElementById("fish-hidden").style.visibility = "visible";
         check_FL = 0;
+        show_fish(0);
     }
 }
+
+function show_fish(state){
+    var fish_hide = document.querySelectorAll("#fish-hidden");
+    for(fish_el in fish_hide){
+        if(state == 0){
+            fish_hide[fish_el].classList.add("hidden");
+        }
+        else if(state == 1){
+            fish_hide[fish_el].classList.remove("hidden");
+        }
+    }
+}
+
 /*Function ของปลา เเละ สิ่งก่อสร้าง*/
 
 function fish_info(fish){

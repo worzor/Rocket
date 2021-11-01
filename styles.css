@@ -414,7 +414,6 @@ p {
   position: absolute;
   z-index: 80;
   transition: 0.1s;
-  visibility: hidden;
 }
 #fish-hidden:hover {
   cursor: pointer;
@@ -553,6 +552,9 @@ p {
   transform: translate(calc(var(--r_to_l5) * -1.19px));
 }
 
+.hidden{
+  visibility: hidden;
+}
 /*Item carcass*/
 #carcass {
   position: absolute;
@@ -609,6 +611,11 @@ p {
   left: -200vh;
   bottom: 30vh;
   transform: translate(calc(calc(var(--r_to_l5) * 0.1) * 1.3px));
+  position: absolute;
+  z-index: 0;
+}
+.apollo:hover{
+  cursor: pointer;
 }
 /*Old code*/
 #rightcoral {
