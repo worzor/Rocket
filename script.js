@@ -1,5 +1,5 @@
 var newY = 0;
-var chack_meso = true; var check_bath = true; var check_aby = true;
+var chack_meso = true; var check_bath = true; var check_aby = true; var check_abypop = true;
 function onscrollFunction(){
     newY = parseInt(window.scrollY / 20);
     document.querySelector("#yyy").innerText = newY;
@@ -43,6 +43,15 @@ function onscrollFunction(){
             document.querySelector("#para-panel").innerText = 'เป็นโซนก้นบึ้ง ลึกตั้งแต่ 4,000 เมตร ไปถึงก้นทะเล โซนนี้มีลักษณะเป็นญาติขาดชีวิต มีความมืดที่สุดของมหาสมุทรปกคลุมไปด้วยความมืดแบบนี้ไปตลอด และมีอุณหภูมิน้ำที่เย็นใกล้จุดเยือกแข็ง มันคือขุมนรกจริงๆ แต่ก็ยังมีสิ่งมีชีวิตที่มีวิวัฒนาการเพื่ออาศัยอยู่ในสภาพแวดล้อมนี้';
             document.querySelector("#name-inner").innerText = 'Abyssopelagic';
             check_aby = false;
+            open_panel();
+        }
+    }if(newY >= 4500){
+        canvas.dataset.scene = 'abypop';
+        if(check_abypop == true){
+            document.querySelector("#header-panel").innerText = 'ปลาไปไหนหมดน้าาาาาา????????';
+            document.querySelector("#para-panel").innerText = 'มองไม่เห็นอะไรเลยใช่มั๊ยยยย? กดSpotlightดูสิๆๆๆๆๆๆๆๆๆ แล้วลองหาดูน้าาาา';
+            document.querySelector("#name-inner").innerText = 'Abyssopelagic';
+            check_abypop = false;
             open_panel();
         }
     }
