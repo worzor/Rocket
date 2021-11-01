@@ -406,8 +406,17 @@ p {
   z-index: 80;
   transition: 0.1s;
 }
-
 #fish:hover {
+  cursor: pointer;
+  transition: 0.5s;
+}
+#fish-hidden{
+  position: absolute;
+  z-index: 80;
+  transition: 0.1s;
+  visibility: hidden;
+}
+#fish-hidden:hover {
   cursor: pointer;
   transition: 0.5s;
 }

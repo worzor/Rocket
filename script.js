@@ -124,10 +124,17 @@ function flashlight(){
     if(check_FL == 0){
         document.getElementById("flashlightTurn").classList.add("active");
         document.getElementById("flashlightBtn").classList.add("active");
+        document.getElementById("fish-hidden").style.visibility = "visible";
+        document.getElementById("fish-hidden").style.visibility = "visible";
+        document.getElementById("fish-hidden").style.visibility = "visible";
+        document.getElementById("fish-hidden").style.visibility = "visible";
         check_FL = 1;
     } else if(check_FL == 1){
         document.getElementById("flashlightTurn").classList.remove("active");
         document.getElementById("flashlightBtn").classList.remove("active");
+        document.getElementById("fish-hidden").style.visibility = "visible";
+        document.getElementById("fish-hidden").style.visibility = "visible";
+        document.getElementById("fish-hidden").style.visibility = "visible";
         check_FL = 0;
     }
 }
