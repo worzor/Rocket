@@ -2,7 +2,7 @@ var newY = 0;
 var chack_meso = true; var check_bath = true; var check_aby = true; var check_abypop = true;
 function onscrollFunction(){
     newY = parseInt(window.scrollY / 20);
-    document.querySelector("#yyy").innerText = newY;
+    document.querySelector("#yyy").innerText = newY + "m.";
     document.body.style.setProperty("--coral_l_epip", newY * 0.5);
     document.body.style.setProperty("--r_to_l", newY * 0.3);
     document.body.style.setProperty("--r_to_l2", (newY * 2) - 200);

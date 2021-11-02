@@ -14,20 +14,19 @@
 </head>
 
 <body onscroll="onscrollFunction() , end_desShow()" id="second-page" style="overflow-y: hidden;">
-    <div id="flashlightTurn" class="flashlight"></div>
     <div class="warp blen-bg">
         <div class="screen-play" id="canvas" data-scene="epip">
 				<div class="bg-animation">
-					<div id='stars'></div>
-					<div id='stars2'></div>
-					<div id='stars3'></div>
-					<div id='stars4'></div>
+					<div id="stars"></div>
+					<div id="stars2"></div>
+					<div id="stars3"></div>
+					<div id="stars4"></div>
 				</div>
             <img class="cover-top" src="./images/Border (Submarine)/submarine top frame.png">
             <img class="cover-bottom" src="./images/Border (Submarine)/submarine bottom frame.png">
             <div class="panel">
                 <div class="meter">
-                    <h1 id="yyy">0</h1>
+                    <h1 id="yyy">0m.</h1>
                 </div>
                 <div class="name-tage">
                     <h1 id="name-inner">Epipelagic</h1>
@@ -35,16 +34,17 @@
             </div>
             <!-- ข้อมูลปลา -->
             <div id="fishInfo" class="message-panel-fish active">
-                <h1 id="fish_header">ข้อมูลทั่วไป</h1>
+                <h1 id="fish_header">คำเเนะนำการเล่น</h1>
                 <p id="fish_para">
-                    ลองกดที่สัตว์หรือสิ่งก่อสร้างต่างๆดูสิ!
+                    ★ คลิ๊กที่ตัวของปลาหรือวัตถุที่ต้องการ เพื่อดูรายละเอียด <br>
+                    ★ เลื่อนลงไปเรื่อยๆเพื่อเข้าสู่หน้าต่อไป
                 </p>
             </div>
-            <a id="exit" class="exit-btn" href="index.html"><h2>Exit</h2></a>
+            <a id="exit" class="exit-btn" href="index.html"><h2>สู่การเดินทางใหม่</h2></a>
             <a id="flashlightBtn" onclick="flashlight()" class="flashlight_btn">
                 <h1>Spotlight</h1>
             </a>
-            
+            <div id="flashlightTurn" class="flashlight"></div>
             <!-- ข้อมูลชั้น เเละ ข้อมูลโบราณสถาน -->
             <div id="textArea" class="message-panel active">
                 <div class="warp-txt" style="padding: 0 3vh;">
