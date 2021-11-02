@@ -286,7 +286,7 @@ body {
   height: 120vh;
 }
 .warp {
-  height: calc(2250vh * 10);
+  height: calc(22027.5 * 10px);
   background: linear-gradient(
     0deg,
     rgba(0, 9, 16, 1) 50%,
