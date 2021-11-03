@@ -16,12 +16,12 @@
 <body onscroll="onscrollFunction() , end_desShow()" id="second-page" style="overflow-y: hidden;">
     <div class="warp blen-bg">
         <div class="screen-play" id="canvas" data-scene="epip">
-				<div class="bg-animation">
-					<div id="stars"></div>
-					<div id="stars2"></div>
-					<div id="stars3"></div>
-					<div id="stars4"></div>
-				</div>
+            <div class="bg-animation">
+                <div id="stars"></div>
+                <div id="stars2"></div>
+                <div id="stars3"></div>
+                <div id="stars4"></div>
+            </div>
             <img class="cover-top" src="./images/Border (Submarine)/submarine top frame.png">
             <img class="cover-bottom" src="./images/Border (Submarine)/submarine bottom frame.png">
             <div class="panel">
@@ -40,7 +40,9 @@
                     ★ เลื่อนลงไปเรื่อยๆเพื่อเข้าสู่หน้าต่อไป
                 </p>
             </div>
-            <a id="exit" class="exit-btn" href="index.html"><h2>สู่การเดินทางใหม่</h2></a>
+            <a id="exit" class="exit-btn" href="index.html">
+                <h2>สู่การเดินทางใหม่</h2>
+            </a>
             <a id="flashlightBtn" onclick="flashlight()" class="flashlight_btn">
                 <h1>Spotlight</h1>
             </a>
@@ -50,7 +52,7 @@
                 <div class="warp-txt" style="padding: 0 3vh;">
                     <h1 id="header-panel">Epipelagic</h1>
                     <p id="para-panel">Epipelagic
-                        ชั้นที่พวกเรารับรู้และสามารถเรียนรู้ถึงสิ่งมีชีวิตต่างๆได้อย่างกว้างขวาง
+                        ชั้นที่พวกเรารับรู้ และสามารถเรียนรู้ถึงสิ่งมีชีวิตต่างๆ ได้อย่างกว้างขวาง
                         ชั้นแรกของมหาสมุทรอันกว้างใหญ่ เป็นที่อยู่อาศัยของปลาหลายชนิดที่พวกเรารู้จัก
                         และมีแสงสว่างมากพอที่จะมองเห็นได้ด้วยตาเปล่า
                         อยากรู้แล้วใช่ไหมล่ะว่ามีปลาอะไรที่น่าสนใจในชั้นนี้บ้าง ถ้าพร้อมแล้วก็ไปสำรวจกันเลย!!!
@@ -96,11 +98,17 @@
             </div>
             <div id="abyssopelagic">
                 <img id="" class="apollo" onclick="carcass_info(6)" src="./images/carcass/apollo.png">
-                <img id="fish-hidden" class="granlator hidden" onclick="fish_info(14)" src="./images/abyss/Bathypterois granlator.png">
-                <img id="fish-hidden" class="dumbo hidden" onclick="fish_info(15)" src="./images/abyss/Dumbo octopuses.png">
-                <img id="fish-hidden" class="fangtooth hidden" onclick="fish_info(16)" src="./images/abyss/fangtooth.png">
-                <img id="fish-hidden" class="anglerfish hidden" onclick="fish_info(17)" src="./images/abyss/humpback anglerfish.png">
-                <div class="end-des"><p id="end" style="padding: 60px;"></p></div>
+                <img id="fish-hidden" class="granlator hidden" onclick="fish_info(14)"
+                    src="./images/abyss/Bathypterois granlator.png">
+                <img id="fish-hidden" class="dumbo hidden" onclick="fish_info(15)"
+                    src="./images/abyss/Dumbo octopuses.png">
+                <img id="fish-hidden" class="fangtooth hidden" onclick="fish_info(16)"
+                    src="./images/abyss/fangtooth.png">
+                <img id="fish-hidden" class="anglerfish hidden" onclick="fish_info(17)"
+                    src="./images/abyss/humpback anglerfish.png">
+                <div class="end-des">
+                    <p id="end" style="padding: 60px;"></p>
+                </div>
                 <div><img id="challengerD" class="challengerDeep" src="./images/challenger_deep.png"></div>
             </div>
         </div>

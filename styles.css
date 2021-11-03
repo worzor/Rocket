@@ -817,7 +817,7 @@ p {
 }
 .notice {
   width: 13ch;
-  animation: typing 3s steps(14), blink 0.5s step-end infinite alternate;
+  animation: typing 7s steps(14), blink 0.9s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid;
@@ -826,7 +826,7 @@ p {
   justify-content: center;
 }
 @keyframes typing {
-  from {
+  0% {
     width: 0;
   }
 }
