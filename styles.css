@@ -163,7 +163,12 @@ body {
 .warp-txt {
   align-items: center;
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
+}
+.warp-btn{
+  height: 10vw;
+  position: relative;
+  bottom: 0;
 }
 .mes-btn {
   width: 5vw;
@@ -176,7 +181,7 @@ body {
   padding: 10px;
   border-style: solid;
   border-radius: 5px;
-  bottom: 5vh;
+  bottom: 30%;
   transition: 0.5s;
 }
 .mes-btn:hover {
